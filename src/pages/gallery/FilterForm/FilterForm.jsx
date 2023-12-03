@@ -1,27 +1,30 @@
 import { useFormik } from 'formik';
-import React, { useEffect, useState } from 'react';
-import {
-  DataListST,
-  DropDownBrands,
-  InputBrands,
-  LabelST,
-} from './FilterForm.styled';
+import React, { useEffect, useRef, useState } from 'react';
+import { DropDownBrands, FormST, LabelST } from './FilterForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAllthunk } from 'redux/cars/thunk';
 import {
   selectAllBrands,
   selectFilterBrands,
+  selectFilterFrom,
+  selectFilterPrice,
+  selectFilterTo,
   selectorFilteredBrands,
 } from 'redux/cars/selectors';
 import { setFilterBrand } from 'redux/cars/slice';
+import InputBrands from './FilterComponents/InputBrands';
+import InputPrice from './FilterComponents/InputPrice';
+import InputMileage from './FilterComponents/InputMileage';
+import { ButtonBase } from 'CommonStyle/Button.styled';
 
 const FilterForm = () => {
-  const [isOpenDropDown, setIsOpenDropDown] = useState(false);
-  const filteredBrands = useSelector(selectorFilteredBrands);
-  const filterBrand = useSelector(selectFilterBrands);
-
   const dispatch = useDispatch();
+  const filterBrand = useSelector(selectFilterBrands);
+  const filterPrice = useSelector(selectFilterPrice);
+  const filterFrom = useSelector(selectFilterFrom);
+  const filterTo = useSelector(selectFilterTo);
+
   useEffect(() => {
     dispatch(getAllthunk());
   }, [dispatch]);
@@ -34,63 +37,41 @@ const FilterForm = () => {
     handleSubmit,
     handleChange,
     handleBlur,
-    // resetForm,
+    resetForm,
   } = useFormik({
     initialValues: {
       brand: filterBrand,
-      price: '',
-      mileage: '',
+      price: filterPrice,
+      from: filterFrom,
+      to: filterTo,
     },
-    onSubmit: values => {},
+    onSubmit: values => {
+      console.log('test');
+    },
   });
 
-  const onClickBrand = brand => {
-    setFieldValue('brand', brand);
-    dispatch(setFilterBrand(brand));
-    setIsOpenDropDown(false);
-  };
   return (
-    <form onSubmit={handleSubmit}>
-      <LabelST>
-        Car brand
-        <InputBrands
-          type="text"
-          name="brand"
-          value={values.brand}
-          //   onFocus={() => {
-          //     setIsOpenDropDown(true);
-          //   }}
-          onClick={() => {
-            setIsOpenDropDown(true);
-          }}
-          onChange={e => {
-            setIsOpenDropDown(true);
-            const { name, value } = e.target;
-            setFieldValue(name, value);
-            dispatch(setFilterBrand(value));
-          }}
-          placeholder="Enter the text"
-        ></InputBrands>
-        {isOpenDropDown && (
-          <DropDownBrands>
-            <ul>
-              {filteredBrands.map((car, index) => {
-                return (
-                  <li
-                    key={index}
-                    onClick={() => {
-                      onClickBrand(car);
-                    }}
-                  >
-                    {car}
-                  </li>
-                );
-              })}
-            </ul>
-          </DropDownBrands>
-        )}
-      </LabelST>
-    </form>
+    <FormST onSubmit={handleSubmit}>
+      <InputBrands values={values} setFieldValue={setFieldValue} />
+      <InputPrice values={values} setFieldValue={setFieldValue} />
+      <InputMileage values={values} setFieldValue={setFieldValue} />
+      <ButtonBase type="submit">Search</ButtonBase>
+      <ButtonBase
+        type="button"
+        onClick={() => {
+          resetForm({
+            values: {
+              brand: '',
+              price: '',
+              from: '',
+              to: '',
+            },
+          });
+        }}
+      >
+        Clear filter
+      </ButtonBase>
+    </FormST>
   );
 };
 

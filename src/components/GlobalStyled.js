@@ -51,9 +51,10 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	.container {
-		width: 1440px;
+		max-width: 1440px;
 		padding: 0 128px;
-		margin: 0 auto;
+		margin-left:  auto;
+		margin-right: auto;
 	}
 
 	/* -----------------CSS MODAL----------------- */

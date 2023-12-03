@@ -1,22 +1,13 @@
 import theme from 'CommonStyle/themeJSX';
 import styled from 'styled-components';
 
-export const DataListST = styled.datalist`
-max-height: 272px;
-width: 224px ;
-padding: 14px 8px 14px 18px;
-
+export const FormST = styled.form`
 display: flex;
-justify-content: flex-end;
-align-items: flex-start;
-gap: 8px;
-/* flex-shrink: 0; */
+justify-content: center;
+align-items: center;
+gap: 18px;
+flex-wrap: wrap;
 
-
-border-radius: 14px;
-border: 1px solid ${theme.colors.secondaryGrayBorder};
-background:${theme.colors.primaryLight} ;
-box-shadow: 0px 4px 36px 0px ${theme.colors.shadowInputDropDown}  ;
 `
 
 export const LabelST = styled.label`
@@ -31,7 +22,7 @@ font-size: 14px;
 line-height: calc(18/14);
 color: ${theme.colors.secondaryLight} ;
 `
-export const InputBrands = styled.input`
+export const InputBrandsST = styled.input`
 width: 224px;
 color: ${theme.colors.primaryDark} ;
 font-size: 18px;
@@ -51,6 +42,28 @@ background-color: ${theme.colors.secondaryGrayBG} ;
 color: ${theme.colors.primaryDark} ;
 }
 `
+
+export const InputPriceST = styled.div`
+min-width: 125px;
+color: ${theme.colors.primaryDark} ;
+font-size: 18px;
+font-weight: 500;
+line-height: calc(20/18);
+
+display: flex;
+padding: 14px 18px 14px 18px;
+justify-content: center;
+align-items: center;
+
+border-radius: 14px;
+border: none;
+background-color: ${theme.colors.secondaryGrayBG} ;
+
+&::placeholder{
+color: ${theme.colors.primaryDark} ;
+}
+`
+
 export const DropDownBrands = styled.div`
 position: absolute;
 top: 78px;
@@ -102,5 +115,41 @@ cursor: pointer;
 }
 
 
+}
+`
+
+export const MileageContainer = styled.div`
+display:flex;
+
+.left{
+
+width: 160px;
+min-width: 160px;
+padding-left: 70px;
+border-radius: 14px 0px 0px 14px;
+border-right: 1px solid ${theme.colors.secondaryGrayBorder};
+
+
+
+}
+.right{
+width: 160px;
+min-width: 160px;
+padding-left: 47px;
+border-radius: 0px 14px 14px 0px;
+}
+`
+export const MileageInputWrapper = styled.div`
+position: relative;
+span{
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: ${theme.colors.primaryDark} ;
+font-size: 18px;
+font-weight: 500;
+line-height: calc(20/18);
 }
 `

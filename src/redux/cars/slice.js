@@ -6,7 +6,12 @@ const { createSlice } = require("@reduxjs/toolkit");
 const initialState = {
     isLoggedUser: false,
     cars: [],
-    filter: { brand: '' },
+    filter: {
+        brand: '',
+        price: '',
+        from: '',
+        to: '',
+    },
     dataForUpdate: ''
 };
 
@@ -21,6 +26,10 @@ const catalogSlice = createSlice({
     },
     reducers: {
         setFilterBrand: (state, { payload }) => { state.filter.brand = payload },
+        setFilterPrice: (state, { payload }) => { state.filter.price = payload },
+        setFilterFrom: (state, { payload }) => { state.filter.from = payload },
+        setFilterTo: (state, { payload }) => { state.filter.to = payload },
+
         closeModal(state) { state.dataForUpdate = '' },
         openChangeModal(state, { payload }) {
             state.dataForUpdate = payload;
@@ -29,4 +38,4 @@ const catalogSlice = createSlice({
 })
 
 export const reducerCatalog = catalogSlice.reducer;
-export const { closeModal, setFilterBrand, openChangeModal } = catalogSlice.actions;
+export const { closeModal, setFilterBrand, setFilterPrice, setFilterFrom, setFilterTo, openChangeModal } = catalogSlice.actions;

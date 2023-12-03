@@ -2,7 +2,8 @@ const theme = Object.freeze({
   colors: {
     primaryLight: '#FFF', // test
     primaryDark: ' #121417', //test
-    primaryAccent: '#407BFF',
+    primaryAccent: '#3470FF', //test
+    primaryAccentHover: '#0B44CD', //test
 
     secondaryLight: '#8A8A89', // test
     secondaryLightBlue: '#D7E3FF',
@@ -14,6 +15,7 @@ const theme = Object.freeze({
 
     secondaryGray: '#8F8F8F', // test
     secondaryGrayText: '#12141733', // test
+    secondaryGrayBorder: '#8a8a8933', // test
 
     secondaryGrayBorder: '#1214170d', // test
     shadowInputDropDown: '#00000005', // test

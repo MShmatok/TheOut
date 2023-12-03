@@ -7,6 +7,7 @@ import ModalChangeContact from '../pages/modalChange/ModalChangeContact';
 
 import { ToastContainer } from 'react-toastify';
 import Gallery from 'pages/gallery/Gallery';
+import Favorite from 'pages/favorite/Favorite';
 
 const App = () => {
   return (
@@ -16,10 +17,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/catalog" element={<Gallery />} />
-          <Route
-            path="/favorite"
-            // element={}
-          />
+          <Route path="/favorite" element={<Favorite />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

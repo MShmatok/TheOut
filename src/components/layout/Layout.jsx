@@ -8,6 +8,7 @@ import { selectorIsLoading } from 'redux/root/selectors';
 
 const Layout = () => {
   const isLoading = useSelector(selectorIsLoading);
+
   return (
     <>
       <Header />
