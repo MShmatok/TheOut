@@ -1,21 +1,16 @@
 import React from 'react';
-import { HeaderStyled, Wrapper } from './HeaderStyled.styled';
-import Navigation from '../navigation/Navigation';
-import UserMenu from '../userMenu/UserMenu';
-import LoginMenu from '../loginMenu/LoginMenu';
-import { useSelector } from 'react-redux';
-
-import { selectorIsAuth } from 'redux/auth/selectors';
+import { HeaderStyled, LinkStyled, Wrapper } from './HeaderStyled.styled';
+import { RouterLink } from 'components/button/button.styled';
 
 const Header = () => {
-  const isAuth = useSelector(selectorIsAuth);
   return (
-    <HeaderStyled>
-      <Wrapper>
-        <Navigation />
-        {isAuth ? <UserMenu /> : <LoginMenu />}
-      </Wrapper>
-    </HeaderStyled>
+    <div className="container">
+      <HeaderStyled>
+        <RouterLink to={'/'}>Home</RouterLink>
+        <RouterLink to={'/catalog'}>Catalog</RouterLink>
+        <RouterLink to={'/favorite'}>Favorite</RouterLink>
+      </HeaderStyled>
+    </div>
   );
 };
 

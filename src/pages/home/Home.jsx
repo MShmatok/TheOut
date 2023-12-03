@@ -1,26 +1,30 @@
 import React from 'react';
-import {
-  SectionStyled,
-  WrapperPagePartStyled,
-} from '../../components/commonStyled/SectionStyled.styled';
+
+import bg_1x_jpg from '../../img/bg/bg_1x_jpg.jpg';
+import bg_2x_jpg from '../../img/bg/bg_2x_jpg.jpg';
+import bg_1x_webP from '../../img/bg/bg_1x_web.webp';
+import bg_2x_webP from '../../img/bg/bg_2x_web.webp';
+
 import { LinkStyled } from '../../components/header/HeaderStyled.styled';
+import { SectionStyled } from './Home.styled';
 
 const Home = () => {
   return (
-    <SectionStyled>
-      <WrapperPagePartStyled>
-        <h1>
-          Welcome to the main page of the Phonebook app! Here, you'll find a
-          convenient and straightforward interface for storing and organizing
-          your contacts in a list. Use our app to quickly add, edit, and delete
-          contacts, as well as search for them by name. Phonebook makes managing
-          your contacts incredibly simple and user-friendly.
-        </h1>
-        <LinkStyled to="/login">
-          <span>Let's go!</span>
-        </LinkStyled>
-      </WrapperPagePartStyled>
-    </SectionStyled>
+    <div className="container">
+      <SectionStyled>
+        <picture>
+          <source
+            srcSet={`${bg_1x_webP} 1x, ${bg_2x_webP} 2x`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`${bg_1x_jpg} 1x, ${bg_2x_jpg} 2x`}
+            type="image/jpg"
+          />
+          <img src={bg_1x_jpg} alt="BackGround welcome page" />
+        </picture>
+      </SectionStyled>
+    </div>
   );
 };
 

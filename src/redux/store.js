@@ -1,13 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { reducerContacts } from "./contact/slice";
+import { reducerCatalog } from "./cars/slice";
 import { reducerRoot } from "./root/slice";
-import { reducerAuth } from "./auth/slice";
+
 
 export const store = configureStore({
     reducer: {
-        contact: reducerContacts,
+        catalog: reducerCatalog,
         root: reducerRoot,
-        auth: reducerAuth,
-    },
 
+    },
 });

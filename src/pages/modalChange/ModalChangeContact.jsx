@@ -5,13 +5,13 @@ import Modal from '@mui/material/Modal';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { closeModal } from 'redux/contact/slice';
+import { closeModal } from 'redux/cars/slice';
 import {
   selectorDataForModal,
   selectorIsOpenModal,
-} from 'redux/contact/selectors';
-import InpurForm from 'components/inputForm/InputForm';
-import { updateContactThunk } from 'redux/contact/thunk';
+} from 'redux/cars/selectors';
+
+// import { updateContactThunk } from 'redux/cars/thunk';
 
 const style = {
   position: 'absolute',
@@ -31,7 +31,7 @@ const ModalChangeContact = () => {
   const handleClose = () => dispatch(closeModal());
 
   const onSubmitModal = (name, number, id) => {
-    dispatch(updateContactThunk({ name, number, id }));
+    // dispatch(updateContactThunk({ name, number, id }));
     handleClose();
   };
   return (
@@ -42,14 +42,7 @@ const ModalChangeContact = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <InpurForm
-            onSubmit={onSubmitModal}
-            mainTitle={'Change contact'}
-            btbTitle={'Apply changes!'}
-            dataUser={data}
-          />
-        </Box>
+        <Box sx={style}></Box>
       </Modal>
     </div>
   );

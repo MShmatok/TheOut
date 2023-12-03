@@ -15,7 +15,7 @@ const handleFulfilled = (state) => {
 }
 
 const initialState = {
-    isLoading: false,
+    isLoading: '',
     error: '',
     isOpenModal: false,
 }
