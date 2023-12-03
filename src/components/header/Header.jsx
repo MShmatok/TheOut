@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderStyled, LinkStyled, Wrapper } from './HeaderStyled.styled';
+import { HeaderStyled } from './HeaderStyled.styled';
 import { RouterLink } from 'components/button/button.styled';
 
 const Header = () => {

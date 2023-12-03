@@ -1,4 +1,4 @@
-import theme from 'CommonStyle/themeJSX';
+// import theme from 'CommonStyle/themeJSX';
 import styled from 'styled-components';
 
 export const SectionStyled = styled.section`

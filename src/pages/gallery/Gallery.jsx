@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { FilterPart, Section, ShowPart } from './Gallery.styled';
 import FilterForm from './FilterForm/FilterForm';
 import { useDispatch, useSelector } from 'react-redux';
-import {  getCarByPageThunk } from 'redux/cars/thunk';
+import { getCarByPageThunk } from 'redux/cars/thunk';
 import CarList from 'components/CarList/CarList';
 import {
   selectCarsPagination,
@@ -22,8 +22,6 @@ const Gallery = () => {
   useEffect(() => {
     dispatch(getCarByPageThunk(currentPage));
   }, [dispatch, currentPage]);
-  console.log('onFilter', onFilter);
-  console.log('FilteredCars', FilteredCars);
 
   return (
     <div className="container">
