@@ -1,6 +1,19 @@
 export const handlerAllCars = (state, { payload }) => {
-    state.cars = payload;
+    state.carsAll = payload;
 }
+
+export const handlerCarByPage = (state, { payload }) => {
+    state.carsPagination = [...state.carsPagination, ...payload];
+}
+
+export const handleCarsFiltered = (state, { payload }) => {
+
+}
+export const handleOnFilter = (state, { payload }) => {
+    state.onFilter = payload;
+}
+
+
 
 export const handlerAddNewContact = (state, { payload: { name, id, number } }) => {
     state.contacts.items.push({ name, id, number });

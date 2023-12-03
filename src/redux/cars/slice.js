@@ -1,16 +1,24 @@
-import { getAllthunk } from "./thunk";
-import { handlerAllCars } from "./handlers";
+import { getAllthunk, getCarByPageThunk } from "./thunk";
+import { handleOnFilter, handlerAllCars, handlerCarByPage } from "./handlers";
 
 const { createSlice } = require("@reduxjs/toolkit");
 
 const initialState = {
-    isLoggedUser: false,
-    cars: [],
+    carsAll: [],
+    carsPagination: [],
+
+    currentPage: 1,
     filter: {
         brand: '',
         price: '',
         from: '',
         to: '',
+    },
+    onFilter: {
+        brand: 'Buick',
+        price: 100,
+        from: 1525,
+        to: 12125,
     },
     dataForUpdate: ''
 };
@@ -22,6 +30,7 @@ const catalogSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(getAllthunk.fulfilled, handlerAllCars)
+            .addCase(getCarByPageThunk.fulfilled, handlerCarByPage)
 
     },
     reducers: {
@@ -29,6 +38,8 @@ const catalogSlice = createSlice({
         setFilterPrice: (state, { payload }) => { state.filter.price = payload },
         setFilterFrom: (state, { payload }) => { state.filter.from = payload },
         setFilterTo: (state, { payload }) => { state.filter.to = payload },
+        setOnFilter: handleOnFilter,
+
 
         closeModal(state) { state.dataForUpdate = '' },
         openChangeModal(state, { payload }) {
@@ -38,4 +49,4 @@ const catalogSlice = createSlice({
 })
 
 export const reducerCatalog = catalogSlice.reducer;
-export const { closeModal, setFilterBrand, setFilterPrice, setFilterFrom, setFilterTo, openChangeModal } = catalogSlice.actions;
+export const { closeModal, setFilterBrand, setOnFilter, setFilterPrice, setFilterFrom, setFilterTo, openChangeModal } = catalogSlice.actions;

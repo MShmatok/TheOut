@@ -6,11 +6,17 @@ export const getAllCars = async () => {
     return data
 }
 
-export const postCar = async (body) => {
-    const { data } = await instance.post('/cars', body)
+export const getCarByPage = async (page) => {
+    const { data } = await instance(`/cars?p=${page}&l=12`)
     return data
 }
 
-// for (let index = 0; index < data.length; index++) {
+
+// export const postCar = async (body) => {
+//     const { data } = await instance.post('/cars', body)
+//     return data
+// }
+// for (let index = 0; index <= data.length; index++) {
+//     console.log(index);
 //     postCar(data[index]);
 // }

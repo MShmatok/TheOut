@@ -3,6 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { DropDownBrands, FormST, LabelST } from './FilterForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { getAllthunk } from 'redux/cars/thunk';
 import {
   selectAllBrands,
@@ -12,7 +15,7 @@ import {
   selectFilterTo,
   selectorFilteredBrands,
 } from 'redux/cars/selectors';
-import { setFilterBrand } from 'redux/cars/slice';
+import { setFilterBrand, setOnFilter } from 'redux/cars/slice';
 import InputBrands from './FilterComponents/InputBrands';
 import InputPrice from './FilterComponents/InputPrice';
 import InputMileage from './FilterComponents/InputMileage';
@@ -24,10 +27,6 @@ const FilterForm = () => {
   const filterPrice = useSelector(selectFilterPrice);
   const filterFrom = useSelector(selectFilterFrom);
   const filterTo = useSelector(selectFilterTo);
-
-  useEffect(() => {
-    dispatch(getAllthunk());
-  }, [dispatch]);
 
   const {
     values,
@@ -46,7 +45,17 @@ const FilterForm = () => {
       to: filterTo,
     },
     onSubmit: values => {
-      console.log('test');
+      const data = {
+        brand: values.brand,
+        price: values.price,
+        from: Number(values.from.split(',').join('')),
+        to: Number(values.to.split(',').join('')),
+      };
+      if (!values.brand & !values.price & !values.from & !values.to) {
+        toast.info(`Select at least one option!`);
+        return;
+      }
+      dispatch(setOnFilter(data));
     },
   });
 
@@ -59,6 +68,7 @@ const FilterForm = () => {
       <ButtonBase
         type="button"
         onClick={() => {
+          dispatch(setOnFilter(''));
           resetForm({
             values: {
               brand: '',
