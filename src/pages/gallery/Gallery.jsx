@@ -31,7 +31,6 @@ const Gallery = () => {
         </FilterPart>
         <ShowPart>
           {onFilter && <CarList data={FilteredCars} />}
-
           {!onFilter && <CarList data={CarsPagination} />}
         </ShowPart>
       </Section>
