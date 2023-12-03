@@ -1,4 +1,4 @@
-[
+export const data = [
     {
         "id": 9582,
         "year": 2008,

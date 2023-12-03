@@ -1,4 +1,5 @@
 import { instance } from './auth'
+import { data } from './data.js'
 
 export const getAllCars = async () => {
     const { data } = await instance('/cars')
@@ -10,4 +11,6 @@ export const postCar = async (body) => {
     return data
 }
 
-for
+// for (let index = 0; index < data.length; index++) {
+//     postCar(data[index]);
+// }
