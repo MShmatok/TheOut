@@ -42,14 +42,50 @@ color: ${theme.colors.primaryAccent};
 
 export const CardFeatureWrapper = styled.div`
 display: flex;
-flex-wrap: wrap;
+flex-direction: column;
 margin-bottom: 28px;
+gap: 5px;
+
+flex-grow: 1;
 
 `
 
-export const FeatureContainer = styled.h3`
+export const FeatureContainer = styled.div`
 color: ${theme.colors.secondaryGrayTextCard};
 font-size: 12px;
 font-weight: 400;
-line-height: calc(18/12)
+line-height: calc(18/12);
+
+white-space: nowrap;
 `
+
+export const FirstLine = styled.div`
+display: flex;
+gap:6px;
+overflow: hidden;
+
+
+
+span{
+    height: 100%;
+    width: 1px;
+background-color: #1214171a;
+
+}
+`
+
+
+export const SecondLine = styled.div`
+display: flex;
+gap:6px;
+overflow: hidden;
+
+
+span{
+    height: 100%;
+    width: 1px;
+background-color: #1214171a;
+
+}
+`
+

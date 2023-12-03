@@ -10,6 +10,8 @@ export const FilterPart = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+
+margin-bottom: 50px;
 `
 export const ShowPart = styled.div`
 display: flex;

@@ -3,8 +3,11 @@ import {
   CardFeatureWrapper,
   CardTitleWrapper,
   ContainerCarCard,
+  FeatureContainer,
+  FirstLine,
   ImgWrapper,
   LayoutImg,
+  SecondLine,
 } from './CarCard.styled';
 import { ButtonBase, ButtonCard } from 'CommonStyle/Button.styled';
 import Feature from './component/Feature';
@@ -28,6 +31,10 @@ const CarCard = ({ data }) => {
     rentalConditions,
     mileage,
   } = data;
+  const location = address.split(',');
+  const country = location[2];
+  const city = location[1];
+  const feature = accessories[2];
 
   return (
     <ContainerCarCard>
@@ -42,7 +49,22 @@ const CarCard = ({ data }) => {
         <h2>{rentalPrice}</h2>
       </CardTitleWrapper>
       <CardFeatureWrapper>
-        <Feature>{}</Feature>
+        <FirstLine>
+          <FeatureContainer>{city}</FeatureContainer>
+          <span></span>
+          <FeatureContainer>{country}</FeatureContainer>
+          <span></span>
+          <FeatureContainer>{rentalCompany}</FeatureContainer>
+        </FirstLine>
+        <SecondLine>
+          <FeatureContainer>{type}</FeatureContainer>
+          <span></span>
+          <FeatureContainer>{make}</FeatureContainer>
+          <span></span>
+          <FeatureContainer>{mileage}</FeatureContainer>
+          <span></span>
+          <FeatureContainer>{feature}</FeatureContainer>
+        </SecondLine>
       </CardFeatureWrapper>
       <ButtonCard>Learn more</ButtonCard>
     </ContainerCarCard>
