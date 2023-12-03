@@ -5,6 +5,8 @@ export const ContainerCarCard = styled.div`
 width: 274px;
 display: flex;
 flex-direction: column;
+cursor: pointer;
+border-radius: 14px;
 
 img{
 width: 274px;
@@ -14,6 +16,13 @@ object-position: center;
 
 border-radius: 14px;
 /* background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2; */
+}
+
+transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, scale 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+&:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    scale: 1.04;
 }
 `
 

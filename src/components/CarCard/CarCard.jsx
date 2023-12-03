@@ -1,4 +1,5 @@
 import React from 'react';
+import NoPhoto from '../../img/NoPhoto.png';
 import {
   CardFeatureWrapper,
   CardTitleWrapper,
@@ -6,11 +7,9 @@ import {
   FeatureContainer,
   FirstLine,
   ImgWrapper,
-  LayoutImg,
   SecondLine,
 } from './CarCard.styled';
-import { ButtonBase, ButtonCard } from 'CommonStyle/Button.styled';
-import Feature from './component/Feature';
+import { ButtonCard } from 'CommonStyle/Button.styled';
 
 const CarCard = ({ data }) => {
   const {
@@ -24,11 +23,7 @@ const CarCard = ({ data }) => {
     rentalCompany,
     type,
     accessories,
-    fuelConsumption,
-    engineSize,
-    description,
-    functionalities,
-    rentalConditions,
+
     mileage,
   } = data;
   const location = address.split(',');
@@ -39,7 +34,13 @@ const CarCard = ({ data }) => {
   return (
     <ContainerCarCard>
       <ImgWrapper>
-        <img src={img} alt={make} />
+        <img
+          src={img}
+          onError={e => {
+            e.target.src = NoPhoto;
+          }}
+          alt={make}
+        />
       </ImgWrapper>
       <CardTitleWrapper>
         <h2>
