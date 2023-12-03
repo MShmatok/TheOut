@@ -14,12 +14,7 @@ const initialState = {
         from: '',
         to: '',
     },
-    onFilter: {
-        brand: 'Buick',
-        price: 100,
-        from: 1525,
-        to: 12125,
-    },
+    onFilter: '',
     dataForUpdate: ''
 };
 

@@ -22,6 +22,8 @@ const Gallery = () => {
   useEffect(() => {
     dispatch(getCarByPageThunk(currentPage));
   }, [dispatch, currentPage]);
+  console.log('onFilter', onFilter);
+  console.log('FilteredCars', FilteredCars);
 
   return (
     <div className="container">
@@ -30,7 +32,9 @@ const Gallery = () => {
           <FilterForm />
         </FilterPart>
         <ShowPart>
-          <CarList data={CarsPagination} />
+          {onFilter && <CarList data={FilteredCars} />}
+
+          {!onFilter && <CarList data={CarsPagination} />}
         </ShowPart>
       </Section>
     </div>
