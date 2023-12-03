@@ -19,13 +19,6 @@ const Gallery = () => {
   const FilteredCars = useSelector(selectFilteredCars);
   const CarsPagination = useSelector(selectCarsPagination);
 
-  // console.log(FilteredCars);
-  console.log('CarsPagination', CarsPagination);
-
-  useEffect(() => {
-    dispatch(getAllthunk());
-  }, [dispatch]);
-
   useEffect(() => {
     dispatch(getCarByPageThunk(currentPage));
   }, [dispatch, currentPage]);

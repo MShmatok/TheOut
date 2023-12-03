@@ -8,8 +8,15 @@ import ModalChangeContact from '../pages/modalChange/ModalChangeContact';
 import { ToastContainer } from 'react-toastify';
 import Gallery from 'pages/gallery/Gallery';
 import Favorite from 'pages/favorite/Favorite';
+import { getAllthunk } from 'redux/cars/thunk';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllthunk());
+  }, [dispatch]);
   return (
     <>
       <GlobalStyles />

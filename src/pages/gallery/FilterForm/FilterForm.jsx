@@ -1,21 +1,18 @@
 import { useFormik } from 'formik';
-import React, { useEffect, useRef, useState } from 'react';
-import { DropDownBrands, FormST, LabelST } from './FilterForm.styled';
+import React from 'react';
+import { FormST } from './FilterForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { getAllthunk } from 'redux/cars/thunk';
 import {
-  selectAllBrands,
   selectFilterBrands,
   selectFilterFrom,
   selectFilterPrice,
   selectFilterTo,
-  selectorFilteredBrands,
 } from 'redux/cars/selectors';
-import { setFilterBrand, setOnFilter } from 'redux/cars/slice';
+import { setOnFilter } from 'redux/cars/slice';
 import InputBrands from './FilterComponents/InputBrands';
 import InputPrice from './FilterComponents/InputPrice';
 import InputMileage from './FilterComponents/InputMileage';

@@ -3,7 +3,6 @@ import { ContainerCarList } from './CarList.styled';
 import CarCard from 'components/CarCard/CarCard';
 
 const CarList = ({ data }) => {
-  console.log(data);
   return (
     <ContainerCarList>
       {data.map(car => {
