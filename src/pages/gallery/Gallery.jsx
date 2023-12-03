@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllthunk, getCarByPageThunk } from 'redux/cars/thunk';
 import CarList from 'components/CarList/CarList';
 import {
+  selectCarsPagination,
   selectCurrentPage,
   selectFilteredCars,
   selectOnFilter,
@@ -16,8 +17,10 @@ const Gallery = () => {
   const currentPage = useSelector(selectCurrentPage);
   const onFilter = useSelector(selectOnFilter);
   const FilteredCars = useSelector(selectFilteredCars);
+  const CarsPagination = useSelector(selectCarsPagination);
 
-  console.log(FilteredCars);
+  // console.log(FilteredCars);
+  console.log('CarsPagination', CarsPagination);
 
   useEffect(() => {
     dispatch(getAllthunk());
@@ -34,7 +37,7 @@ const Gallery = () => {
           <FilterForm />
         </FilterPart>
         <ShowPart>
-          <CarList></CarList>
+          <CarList data={CarsPagination} />
         </ShowPart>
       </Section>
     </div>

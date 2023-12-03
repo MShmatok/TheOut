@@ -15,6 +15,8 @@ const theme = Object.freeze({
 
     secondaryGray: '#8F8F8F', // test
     secondaryGrayText: '#12141733', // test
+    secondaryGrayTextCard: '#12141780', // test
+
     secondaryGrayBorder: '#8a8a8933', // test
 
     secondaryGrayBorder: '#1214170d', // test

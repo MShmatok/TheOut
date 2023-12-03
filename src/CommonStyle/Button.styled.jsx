@@ -29,3 +29,8 @@ export const ButtonBase = styled.button`
     background-color: ${theme.colors.primaryAccentHover};
   }
 `;
+
+export const ButtonCard = styled(ButtonBase)`
+  width: 100%;
+  padding: 12px 44px;
+`;

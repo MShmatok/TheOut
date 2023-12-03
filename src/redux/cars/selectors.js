@@ -32,7 +32,10 @@ export const selectCurrentPage = state => state.catalog.currentPage;
 
 
 export const selectAllCars = state => state.catalog.carsAll;
+export const selectCarsPagination = state => state.catalog.carsPagination;
+
 export const selectOnFilter = state => state.catalog.onFilter;
+
 
 export const selectFilteredCars = createSelector([selectAllCars, selectOnFilter], (carsAll, onFilter) => {
 
