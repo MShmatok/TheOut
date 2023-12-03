@@ -9,6 +9,7 @@ gap: 18px;
 flex-wrap: wrap;
 z-index: 1;
 
+
 `
 
 export const LabelST = styled.label`
@@ -51,6 +52,7 @@ color: ${theme.colors.primaryDark} ;
 font-size: 18px;
 font-weight: 500;
 line-height: calc(20/18);
+cursor: pointer;
 
 display: flex;
 padding: 14px 18px 14px 18px;
