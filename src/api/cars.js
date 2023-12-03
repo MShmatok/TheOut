@@ -1,5 +1,5 @@
 import { instance } from './auth'
-import { data } from './data.js'
+// import { data } from './data.js'
 
 export const getAllCars = async () => {
     const { data } = await instance('/cars')

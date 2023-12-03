@@ -44,7 +44,7 @@ export const selectFilteredCars = createSelector([selectAllCars, selectOnFilter]
     const result = carsAll.filter((car) => {
 
         if (onFilter.brand) {
-            if (car.make != onFilter.brand) {
+            if (car.make !== onFilter.brand) {
                 return false;
             }
         }

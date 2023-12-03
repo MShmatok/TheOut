@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { FilterPart, Section, ShowPart } from './Gallery.styled';
 import FilterForm from './FilterForm/FilterForm';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllthunk, getCarByPageThunk } from 'redux/cars/thunk';
+import {  getCarByPageThunk } from 'redux/cars/thunk';
 import CarList from 'components/CarList/CarList';
 import {
   selectCarsPagination,
@@ -10,7 +10,7 @@ import {
   selectFilteredCars,
   selectOnFilter,
 } from 'redux/cars/selectors';
-import { setCarsFiltered } from 'redux/cars/slice';
+// import { setCarsFiltered } from 'redux/cars/slice';
 
 const Gallery = () => {
   const dispatch = useDispatch();

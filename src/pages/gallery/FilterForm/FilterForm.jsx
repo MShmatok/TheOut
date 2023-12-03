@@ -25,16 +25,7 @@ const FilterForm = () => {
   const filterFrom = useSelector(selectFilterFrom);
   const filterTo = useSelector(selectFilterTo);
 
-  const {
-    values,
-    touched,
-    errors,
-    setFieldValue,
-    handleSubmit,
-    handleChange,
-    handleBlur,
-    resetForm,
-  } = useFormik({
+  const { values, setFieldValue, handleSubmit, resetForm } = useFormik({
     initialValues: {
       brand: filterBrand,
       price: filterPrice,

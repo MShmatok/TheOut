@@ -13,7 +13,6 @@ import { ButtonCard } from 'CommonStyle/Button.styled';
 
 const CarCard = ({ data }) => {
   const {
-    id,
     img,
     make,
     model,

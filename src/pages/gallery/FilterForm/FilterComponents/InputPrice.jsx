@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { DropDownBrands, InputPriceST, LabelST } from '../FilterForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectRangePrice, selectorFilteredBrands } from 'redux/cars/selectors';
+import { selectRangePrice } from 'redux/cars/selectors';
 import { setFilterPrice } from 'redux/cars/slice';
 
 const InputPrice = ({ values, setFieldValue }) => {
@@ -11,7 +11,7 @@ const InputPrice = ({ values, setFieldValue }) => {
   const ref = useRef(null);
 
   const rangePrice = useSelector(selectRangePrice);
-  const filteredBrands = useSelector(selectorFilteredBrands);
+  // const filteredBrands = useSelector(selectorFilteredBrands);
 
   const onMouseDownBrand = price => {
     setFieldValue('price', price);

@@ -3,7 +3,7 @@ import Layout from './layout/Layout';
 import Home from '../pages/home/Home';
 
 import { GlobalStyles } from './GlobalStyled';
-import ModalChangeContact from '../pages/modalChange/ModalChangeContact';
+// import ModalChangeContact from '../pages/modalChange/ModalChangeContact';
 
 import { ToastContainer } from 'react-toastify';
 import Gallery from 'pages/gallery/Gallery';
