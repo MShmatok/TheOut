@@ -39,9 +39,13 @@ const catalogSlice = createSlice({
         closeModal(state) { state.dataForUpdate = '' },
         openChangeModal(state, { payload }) {
             state.dataForUpdate = payload;
-        }
+        },
+        clearData(state, { payload }) {
+            state.carsAll = [];
+            state.carsPagination = [];
+        },
     }
 })
 
 export const reducerCatalog = catalogSlice.reducer;
-export const { closeModal, setFilterBrand, setOnFilter, setFilterPrice, setFilterFrom, setFilterTo, openChangeModal } = catalogSlice.actions;
+export const { closeModal, clearData, setFilterBrand, setOnFilter, setFilterPrice, setFilterFrom, setFilterTo, openChangeModal } = catalogSlice.actions;
