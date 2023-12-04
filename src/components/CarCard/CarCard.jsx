@@ -10,8 +10,12 @@ import {
   SecondLine,
 } from './CarCard.styled';
 import { ButtonCard } from 'CommonStyle/Button.styled';
+import { useDispatch } from 'react-redux';
+import { openModal } from 'redux/cars/slice';
 
 const CarCard = ({ data }) => {
+  const dispatch = useDispatch();
+
   const {
     img,
     make,
@@ -25,6 +29,10 @@ const CarCard = ({ data }) => {
 
     mileage,
   } = data;
+
+  const onClick = data => {
+    dispatch(openModal(data));
+  };
   const location = address.split(',');
   const country = location[2];
   const city = location[1];
@@ -66,7 +74,13 @@ const CarCard = ({ data }) => {
           <FeatureContainer>{feature}</FeatureContainer>
         </SecondLine>
       </CardFeatureWrapper>
-      <ButtonCard>Learn more</ButtonCard>
+      <ButtonCard
+        onClick={() => {
+          onClick(data);
+        }}
+      >
+        Learn more
+      </ButtonCard>
     </ContainerCarCard>
   );
 };

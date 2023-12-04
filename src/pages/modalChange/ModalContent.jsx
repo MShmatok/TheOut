@@ -16,27 +16,8 @@ import {
   SecondLine,
 } from 'components/CarCard/CarCard.styled';
 import { ButtonBase, ButtonRental } from 'CommonStyle/Button.styled';
-const data = {
-  id: 9681,
-  year: 2019,
-  make: 'Toyota',
-  model: 'Camry',
-  type: 'Sedan',
-  img: 'https://res.cloudinary.com/dfye2bobn/image/upload/v1694612601/auto/i4tffa7rau8akban0jgd.jpg',
-  description:
-    "The Toyota Camry is a reliable and comfortable sedan known for its spacious interior, smooth ride, and excellent fuel efficiency. It's a popular choice among families and commuters alike.",
-  fuelConsumption: '5.8',
-  engineSize: '2.5L 4-cylinder',
-  accessories: ['Bluetooth connectivity', 'Keyless entry', 'Climate control'],
-  functionalities: ['Front-Wheel Drive', 'Lane Departure Warning', 'Drive'],
-  rentalPrice: '$55',
-  rentalCompany: 'AutoRentalPro',
-  address: '456 Sample Street, Lviv, Ukraine',
-  rentalConditions:
-    "Minimum age: 25\nValid driver's license\nCredit card for security deposit",
-  mileage: 8400,
-};
-const ModalContent = () => {
+
+const ModalContent = ({ data }) => {
   const {
     id,
     img,

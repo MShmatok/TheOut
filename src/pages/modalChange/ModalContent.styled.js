@@ -20,6 +20,10 @@ background-color: #fff;
 img{
     border-radius: 14px;
     margin-bottom: 14px;
+
+    width:461px;
+        height:248px;
+        object-fit: cover;
 }
 `
 
