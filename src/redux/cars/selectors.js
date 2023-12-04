@@ -6,23 +6,25 @@ export const selectAllBrands = state => {
     return uniqueBrandsArray;
 }
 
-export const selectRangePrice = state => {
-    const catalog = state.catalog.carsAll;
-    let maxPrice = 0;
-    const rangePrice = [];
 
-    for (let index = 0; index < catalog.length; index++) {
-        const currentPrice = Number(catalog[index].rentalPrice.split('').slice(1).join(''))
-        if (maxPrice < currentPrice) {
-            maxPrice = currentPrice
-        }
-    }
-    for (let number = 10; number <= Math.ceil(maxPrice / 10) * 10; number = number + 10) {
-        rangePrice.push(number)
-    }
 
-    return rangePrice;
-}
+// export const selectRangePrice = state => {
+//     const catalog = state.catalog.carsAll;
+//     let maxPrice = 0;
+//     const rangePrice = [];
+
+//     for (let index = 0; index < catalog.length; index++) {
+//         const currentPrice = Number(catalog[index].rentalPrice.split('').slice(1).join(''))
+//         if (maxPrice < currentPrice) {
+//             maxPrice = currentPrice
+//         }
+//     }
+//     for (let number = 10; number <= Math.ceil(maxPrice / 10) * 10; number = number + 10) {
+//         rangePrice.push(number)
+//     }
+
+//     return rangePrice;
+// }
 export const selectFilterBrands = state => state.catalog.filter.brand;
 export const selectFilterPrice = state => state.catalog.filter.price;
 export const selectFilterFrom = state => state.catalog.filter.from;
@@ -90,4 +92,24 @@ export const selectorFilteredBrands = createSelector([selectAllBrands, selectFil
             .toLocaleLowerCase()
             .includes(FilterBrands.trim().toLocaleLowerCase());
     }).sort((a, b) => a - b)
+});
+
+export const selectRangePrice = createSelector([selectAllCars], (catalog) => {
+
+    let maxPrice = 0;
+    const rangePrice = [];
+
+    for (let index = 0; index < catalog.length; index++) {
+        const currentPrice = Number(catalog[index].rentalPrice.split('').slice(1).join(''))
+        if (maxPrice < currentPrice) {
+            maxPrice = currentPrice
+        }
+    }
+    for (let number = 10; number <= Math.ceil(maxPrice / 10) * 10; number = number + 10) {
+        rangePrice.push(number)
+    }
+
+    return rangePrice;
+
+
 });
