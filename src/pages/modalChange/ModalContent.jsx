@@ -140,7 +140,7 @@ const ModalContent = () => {
           Price: <span>{rentalPrice}</span>
         </RentalConditions>
       </RentalConditionsWrapper>
-      <ButtonRental>Rental car</ButtonRental>
+      <ButtonRental href="tel:+380730000000">Rental car</ButtonRental>
     </ModalContainer>
   );
 };
