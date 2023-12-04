@@ -3,11 +3,11 @@ import Layout from './layout/Layout';
 import Home from '../pages/home/Home';
 
 import { GlobalStyles } from './GlobalStyled';
-// import ModalChangeContact from '../pages/modalChange/ModalChangeContact';
 
 import { ToastContainer } from 'react-toastify';
 import Gallery from 'pages/gallery/Gallery';
 import Favorite from 'pages/favorite/Favorite';
+import ModalCarCard from 'pages/modalChange/ModalCarCard';
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
-      {/* <ModalChangeContact /> */}
+      <ModalCarCard />
       <ToastContainer
         position="bottom-right"
         autoClose={1500}

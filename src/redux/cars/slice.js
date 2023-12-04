@@ -15,7 +15,7 @@ const initialState = {
         to: '',
     },
     onFilter: '',
-    dataForUpdate: ''
+    dataForModal: ''
 };
 
 const catalogSlice = createSlice({
@@ -38,7 +38,7 @@ const catalogSlice = createSlice({
         setOnFilter: handleOnFilter,
 
 
-        closeModal(state) { state.dataForUpdate = '' },
+        closeModal(state) { state.dataForModal = '' },
         openChangeModal(state, { payload }) {
             state.dataForUpdate = payload;
         },

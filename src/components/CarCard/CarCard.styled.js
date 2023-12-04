@@ -52,10 +52,16 @@ color: ${theme.colors.primaryAccent};
 export const CardFeatureWrapper = styled.div`
 display: flex;
 flex-direction: column;
-margin-bottom: 28px;
+margin-bottom:  ${props => props.$marginBottom || '28px'};;
 gap: 5px;
 
 flex-grow: 1;
+span{
+    /* height: 100%; */
+    /* width: 1px; */
+border-left: 1px solid #1214171a;
+
+}
 
 `
 
@@ -66,6 +72,8 @@ font-weight: 400;
 line-height: calc(18/12);
 
 white-space: nowrap;
+
+
 `
 
 export const FirstLine = styled.div`
@@ -75,12 +83,7 @@ overflow: hidden;
 
 
 
-span{
-    height: 100%;
-    width: 1px;
-background-color: #1214171a;
 
-}
 `
 
 

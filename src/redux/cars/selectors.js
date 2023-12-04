@@ -8,13 +8,14 @@ export const selectFilterTo = state => state.catalog.filter.to;
 export const selectAllCars = state => state.catalog.carsAll;
 export const selectCarsPagination = state => state.catalog.carsPagination;
 export const selectOnFilter = state => state.catalog.onFilter;
+export const selectorDataForModal = state => state.catalog.dataForModal;
+
 
 
 export const selectAllContacts = state => state.contact.contacts.items;
 export const selectIsLoading = state => state.contact.isLoading;
 export const selectorIsLoading = state => state.contact.isLoading;
-export const selectorIsOpenModal = state => state.contact.dataForUpdate;
-export const selectorDataForModal = state => state.contact.dataForUpdate;
+
 
 export const selectAllBrands = state => {
     const uniqueBrands = new Set(state.catalog.carsAll.map(car => car.make));
