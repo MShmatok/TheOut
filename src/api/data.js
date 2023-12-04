@@ -525,7 +525,7 @@ export const data = [
         "make": "Chrysler",
         "model": "Voyager",
         "type": "Van/Minivan",
-        "photoLink": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/chrysler_voyager.jpg",
+        "img": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/chrysler_voyager.jpg",
         "description": "The Chrysler Voyager is a practical and versatile van/minivan that provides comfortable seating, ample cargo space, and a range of convenient features for family-oriented transportation.",
         "fuelConsumption": "8.2",
         "engineSize": "3.6L V6",
@@ -551,7 +551,7 @@ export const data = [
         "make": "Kia",
         "model": "Rio",
         "type": "Hatchback",
-        "photoLink": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/kia_rio_hatchback.jpg",
+        "img": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/kia_rio_hatchback.jpg",
         "description": "The Kia Rio is a compact and fuel-efficient hatchback that offers a blend of affordability, reliability, and practicality, making it an excellent choice for urban commuting and everyday driving.",
         "fuelConsumption": "6.2",
         "engineSize": "1.6L 4-cylinder",
@@ -577,7 +577,7 @@ export const data = [
         "make": "Volvo",
         "model": "XC60",
         "type": "SUV",
-        "photoLink": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/volvo_xc60_2.jpg",
+        "img": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/volvo_xc60_2.jpg",
         "description": "The Volvo XC60 is a luxurious and versatile SUV that combines Scandinavian design, advanced safety features, and a comfortable driving experience, making it an ideal choice for families and adventure enthusiasts.",
         "fuelConsumption": "8.5",
         "engineSize": "2.0L 4-cylinder",
@@ -603,7 +603,7 @@ export const data = [
         "make": "Land Rover",
         "model": "Range Rover Sport",
         "type": "SUV",
-        "photoLink": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/land_rover_range_rover_sport.jpg",
+        "img": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/land_rover_range_rover_sport.jpg",
         "description": "The Land Rover Range Rover Sport is a premium SUV that offers a perfect blend of luxury, off-road capability, and dynamic performance, providing a refined driving experience both on and off the road.",
         "fuelConsumption": "11.8",
         "engineSize": "3.0L V6",
@@ -629,7 +629,7 @@ export const data = [
         "make": "Kia",
         "model": "Rio",
         "type": "Sedan, Hatchback",
-        "photoLink": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/kia_rio_sedan_hatchback.jpg",
+        "img": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/kia_rio_sedan_hatchback.jpg",
         "description": "The Kia Rio is a versatile and fuel-efficient vehicle available in both sedan and hatchback body styles, offering a comfortable cabin, modern features, and a smooth driving experience, making it an attractive choice for urban commuters.",
         "fuelConsumption": "6.2",
         "engineSize": "1.6L 4-cylinder",
@@ -649,4 +649,318 @@ export const data = [
         "rentalConditions": "Minimum age: 21\nValid driver's license\nSecurity deposit and insurance required",
         "mileage": 6234
     }
+    ,
+    {
+        "id": 9681,
+        "year": 2019,
+        "make": "Toyota",
+        "model": "Camry",
+        "type": "Sedan",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694612601/auto/i4tffa7rau8akban0jgd.jpg",
+        "description": "The Toyota Camry is a reliable and comfortable sedan known for its spacious interior, smooth ride, and excellent fuel efficiency. It's a popular choice among families and commuters alike.",
+        "fuelConsumption": "5.8",
+        "engineSize": "2.5L 4-cylinder",
+        "accessories": [
+            "Bluetooth connectivity",
+            "Keyless entry",
+            "Climate control"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Lane Departure Warning",
+            "Drive"
+        ],
+        "rentalPrice": "$55",
+        "rentalCompany": "AutoRentalPro",
+        "address": "456 Sample Street, Lviv, Ukraine",
+        "rentalConditions": "Minimum age: 25\nValid driver's license\nCredit card for security deposit",
+        "mileage": 8400
+    },
+    {
+        "id": 9632,
+        "year": 2018,
+        "make": "Honda",
+        "model": "Civic",
+        "type": "Sedan",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694776826/auto/yiwxuq3ip1vb8nxobrvk.jpg",
+        "description": "The Honda Civic is a popular choice for those seeking a reliable and fuel-efficient sedan. It offers a comfortable interior, modern technology, and a reputation for durability.",
+        "fuelConsumption": "6.0",
+        "engineSize": "1.5L 4-cylinder",
+        "accessories": [
+            "Apple CarPlay and Android Auto integration",
+            "Remote start system",
+            "Lane Keeping Assist"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Collision Mitigation Braking System",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$48",
+        "rentalCompany": "City Car Rentals",
+        "address": "789 Sample Road, Kyiv, Ukraine",
+        "rentalConditions": "Minimum age: 23\nValid driver's license\nSecurity deposit required",
+        "mileage": 7200
+    },
+    {
+        "id": 9638,
+        "year": 2019,
+        "make": "Lexus",
+        "model": "RX",
+        "type": "SUV",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694613318/auto/gmvrem7zhsyraiyvqssj.jpg",
+        "description": "The Lexus RX is a is a luxury crossover SUV sold since 1998 by Lexus, a luxury division of Toyota. In the fourth generation, a turbocharged (2.0-liter inline-four) RX 200t/300 model was introduced to replace the previous 2.7-liter unit.",
+        "fuelConsumption": "5.5",
+        "engineSize": "2.5L 4-cylinder",
+        "accessories": [
+            "Lexus Infotainment 3 system",
+            "Lane Change Alert with Side Blind Zone Alert",
+            "Remote start"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Forward Collision Alert",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$70",
+        "rentalCompany": "City Drive Rentals",
+        "address": "333 Commute Lane, Kharkiv, Ukraine",
+        "rentalConditions": "Minimum age: 23\nValid driver's license\nSecurity deposit required",
+        "mileage": 3900
+    },
+    {
+        "id": 9999,
+        "year": 2012,
+        "make": "Volkswagen",
+        "model": "Passat",
+        "type": "Sedan",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694783741/auto/a8j0jug5irdgpptwyjut.jpg",
+        "description": "The Volkswagen Passat is a reliable and comfortable sedan with a spacious interior. It's known for its smooth ride and fuel efficiency.",
+        "fuelConsumption": "8.2",
+        "engineSize": "2.0L 4-cylinder",
+        "accessories": [
+            "6.5-inch touchscreen display",
+            "Keyless entry",
+            "Cruise control"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Blind-spot monitoring",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$50",
+        "rentalCompany": "City Car Rentals",
+        "address": "123 Elm Street, Kyiv, Ukraine",
+        "rentalConditions": "Minimum age: 21\nValid driver's license\nSecurity deposit required",
+        "mileage": 8900
+    },
+    {
+        "id": 7654,
+        "year": 2021,
+        "make": "Lexus",
+        "model": "RX 350",
+        "type": "SUV",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694728466/auto/lhq2jvakvcj5mcab3gr9.jpg",
+        "description": "The Lexus RX 350 is a luxury SUV known for its elegant design, premium interior, and advanced technology features. It offers a comfortable and quiet ride.",
+        "fuelConsumption": "9.0",
+        "engineSize": "3.5L V6",
+        "accessories": [
+            "12.3-inch touchscreen display",
+            "Keyless entry",
+            "Adaptive cruise control"
+        ],
+        "functionalities": [
+            "All-Wheel Drive",
+            "Lane departure warning",
+            "Automatic emergency braking"
+        ],
+        "rentalPrice": "$80",
+        "rentalCompany": "Luxury Rentals",
+        "address": "789 Oak Avenue, Kyiv, Ukraine",
+        "rentalConditions": "Minimum age: 25\nValid driver's license\nNo security deposit required",
+        "mileage": 3200
+    },
+    {
+        "id": 9938,
+        "year": 2021,
+        "make": "Mazda",
+        "model": "CX-5",
+        "type": "SUV",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694773126/auto/ppjyggugnnjaigkjodn9.jpg",
+        "description": "The Mazda CX-5 is a stylish and agile SUV known for its premium interior, responsive handling, and excellent safety ratings. It's a great choice for those seeking a blend of luxury and performance.",
+        "fuelConsumption": "7.0",
+        "engineSize": "2.5L 4-cylinder",
+        "accessories": [
+            "8-inch infotainment display",
+            "Advanced keyless entry",
+            "Сruise control"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Lane departure warning",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$62",
+        "rentalCompany": "Luxury Auto Rentals",
+        "address": "678 Sample Lane, Kharkiv, Ukraine",
+        "rentalConditions": "Minimum age: 24\nValid driver's license\nSecurity deposit and insurance required",
+        "mileage": 5900
+    },
+    {
+        "id": 9637,
+        "year": 2020,
+        "make": "Volkswagen",
+        "model": "Jetta",
+        "type": "Sedan",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694728211/auto/hzdfvkzmmjpdlo5pcohb.jpg",
+        "description": "The Volkswagen Jetta is a comfortable and stylish sedan known for its spacious cabin, smooth ride, and advanced technology. It's a great choice for both daily commuting and long trips.",
+        "fuelConsumption": "6.8",
+        "engineSize": "1.4L 4-cylinder",
+        "accessories": [
+            "8-inch touchscreen infotainment",
+            "Keyless access with push-button start",
+            "Forward warning"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Blind-spot monitor",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$54",
+        "rentalCompany": "CityWay Rentals",
+        "address": "456 Example Road, Odessa, Ukraine",
+        "rentalConditions": "Minimum age: 21\nValid driver's license\nSecurity deposit required",
+        "mileage": 7400
+    },
+    {
+        "id": 9633,
+        "year": 2021,
+        "make": "Ford",
+        "model": "Escape",
+        "type": "SUV",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694612794/auto/aksg0del05lgdxsuzmts.jpg",
+        "description": "The Ford Escape is a versatile SUV known for its spacious interior, smooth ride, and advanced safety features. It's a great choice for outdoor adventures and family trips.",
+        "fuelConsumption": "7.5",
+        "engineSize": "2.0L 4-cylinder",
+        "accessories": [
+            "Sync 3 infotainment system",
+            "Blind Spot Monitoring",
+            "Dual climate control"
+        ],
+        "functionalities": [
+            "All-Wheel Drive",
+            "Adaptive Cruise Control",
+            "Parking sensors"
+        ],
+        "rentalPrice": "$65",
+        "rentalCompany": "Adventure Rentals",
+        "address": "123 Vacation Boulevard, Odessa, Ukraine",
+        "rentalConditions": "Minimum age: 25\nValid driver's license\nInsurance coverage included",
+        "mileage": 5500
+    },
+    {
+        "id": 9635,
+        "year": 2022,
+        "make": "Nissan",
+        "model": "Rogue",
+        "type": "SUV",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694775848/auto/wjjxsex0xhlvfc4wymue.jpg",
+        "description": "The Nissan Rogue is a modern and spacious SUV with comfortable seating and user-friendly technology. It's a top choice for families and road trips.",
+        "fuelConsumption": "7.2",
+        "engineSize": "2.5L 4-cylinder",
+        "accessories": [
+            "NissanConnect infotainment system",
+            "Rear Cross Traffic Alert",
+            "Panoramic sunroof"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Lane Departure Warning",
+            "360-degree camera"
+        ],
+        "rentalPrice": "$20",
+        "rentalCompany": "Traveler's Choice Rentals",
+        "address": "567 Journey Avenue, Lviv, Ukraine",
+        "rentalConditions": "Minimum age: 24\nValid driver's license\nDeposit required",
+        "mileage": 4700
+    },
+    {
+        "id": 9636,
+        "year": 2020,
+        "make": "Hyundai",
+        "model": "Tucson",
+        "type": "SUV",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694773475/auto/hbawpncfu2vygsh0tudv.jpg",
+        "description": "The Hyundai Tucson is a stylish and well-equipped SUV that offers a comfortable ride and a user-friendly infotainment system. It's ideal for city and highway driving.",
+        "fuelConsumption": "6.8",
+        "engineSize": "2.0L 4-cylinder",
+        "accessories": [
+            "Apple CarPlay and Android Auto integration",
+            "Blind Spot Detection",
+            "Dual climate control"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Lane Keeping Assist",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$55",
+        "rentalCompany": "Urban Explorers Rentals",
+        "address": "890 Urban Street, Dnipro, Ukraine",
+        "rentalConditions": "Minimum age: 22\nValid driver's license\nInsurance coverage included",
+        "mileage": 6100
+    },
+    {
+        "id": 9937,
+        "year": 2019,
+        "make": "Chevrolet",
+        "model": "Malibu",
+        "type": "Sedan",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694613006/auto/hnn2p5rgeiys7iylm5s1.jpg",
+        "description": "The Chevrolet Malibu is a comfortable and fuel-efficient sedan with a spacious cabin and modern technology. It's suitable for both daily commuting and long-distance travel.",
+        "fuelConsumption": "6.5",
+        "engineSize": "1.5L 4-cylinder",
+        "accessories": [
+            "Chevrolet Infotainment 3 system",
+            "Lane Change Alert with Side Blind Zone Alert",
+            "Remote start"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Forward Collision Alert",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$50",
+        "rentalCompany": "City Drive Rentals",
+        "address": "456 Commute Lane, Kharkiv, Ukraine",
+        "rentalConditions": "Minimum age: 23\nValid driver's license\nSecurity deposit required",
+        "mileage": 6900
+    },
+    {
+        "id": 9639,
+        "year": 2019,
+        "make": "Nissan",
+        "model": "Altima",
+        "type": "Sedan",
+        "img": "https://res.cloudinary.com/dfye2bobn/image/upload/v1694674219/auto/xguk0gflyulquf8wzda6.jpg",
+        "description": "The Nissan Altima is a stylish and reliable sedan known for its comfortable interior, advanced safety features, and strong fuel efficiency. It's a popular choice for daily commuting.",
+        "fuelConsumption": "6.5",
+        "engineSize": "2.5L 4-cylinder",
+        "accessories": [
+            "8-inch touchscreen infotainment",
+            "Push-button ignition",
+            "Cruise control"
+        ],
+        "functionalities": [
+            "Front-Wheel Drive",
+            "Forward collision warning",
+            "Rearview camera"
+        ],
+        "rentalPrice": "$53",
+        "rentalCompany": "CityDrive Rentals",
+        "address": "890 Example Street, Lviv, Ukraine",
+        "rentalConditions": "Minimum age: 22\nValid driver's license\nSecurity deposit required",
+        "mileage": 9800
+    }
+
 ]
