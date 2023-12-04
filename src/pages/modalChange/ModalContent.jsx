@@ -10,12 +10,11 @@ import {
 import NoPhoto from '../../img/NoPhoto.png';
 import {
   CardFeatureWrapper,
-  CardTitleWrapper,
   FeatureContainer,
   FirstLine,
   SecondLine,
 } from 'components/CarCard/CarCard.styled';
-import { ButtonBase, ButtonRental } from 'CommonStyle/Button.styled';
+import { ButtonRental } from 'CommonStyle/Button.styled';
 
 const ModalContent = ({ data }) => {
   const {
@@ -26,7 +25,7 @@ const ModalContent = ({ data }) => {
     year,
     rentalPrice,
     address,
-    rentalCompany,
+
     type,
     accessories,
     fuelConsumption,
@@ -39,7 +38,7 @@ const ModalContent = ({ data }) => {
   const location = address.split(',');
   const country = location[2];
   const city = location[1];
-  const feature = accessories[2];
+
   const conditions = rentalConditions.split('\n');
   const age = conditions[0].match(/\d+/);
 
