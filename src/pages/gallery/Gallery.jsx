@@ -13,6 +13,7 @@ import {
 } from 'redux/cars/selectors';
 import { clearData, setCurrentPage } from 'redux/cars/slice';
 import { ButtonLoadMore } from 'CommonStyle/Button.styled';
+import { selectorIsLoading } from 'redux/root/selectors';
 // import { setCarsFiltered } from 'redux/cars/slice';
 
 const Gallery = () => {
@@ -22,6 +23,7 @@ const Gallery = () => {
   const FilteredCars = useSelector(selectFilteredCars);
   const CarsPagination = useSelector(selectCarsPagination);
   const allCars = useSelector(selectAllCars);
+  const isLoading = useSelector(selectorIsLoading);
 
   useEffect(() => {
     dispatch(clearData());
@@ -37,6 +39,9 @@ const Gallery = () => {
       dispatch(setCurrentPage());
     }
   };
+
+  const showLoadMore =
+    allCars.length / 8 > currentPage && !onFilter && !isLoading;
   return (
     <div className="container">
       <Section>
@@ -48,9 +53,11 @@ const Gallery = () => {
           {!onFilter && <CarList data={CarsPagination} />}
         </ShowPart>
         <LoadMore>
-          <ButtonLoadMore type="button" onClick={loadMore}>
-            Load More
-          </ButtonLoadMore>
+          {showLoadMore && (
+            <ButtonLoadMore type="button" onClick={loadMore}>
+              Load More
+            </ButtonLoadMore>
+          )}
         </LoadMore>
       </Section>
     </div>

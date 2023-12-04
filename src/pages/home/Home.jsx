@@ -2,8 +2,8 @@ import React from 'react';
 
 import bg_1x_jpg from '../../img/bg/bg_1x_jpg.jpg';
 import bg_2x_jpg from '../../img/bg/bg_2x_jpg.jpg';
-import bg_1x_webP from '../../img/bg/bg_1x_web.webp';
-import bg_2x_webP from '../../img/bg/bg_2x_web.webp';
+import bg_1x_web from '../../img/bg/bg_1x_web.webp';
+import bg_2x_web from '../../img/bg/bg_2x_web.webp';
 
 // import { LinkStyled } from '../../components/header/HeaderStyled.styled';
 import { SectionStyled } from './Home.styled';
@@ -14,7 +14,7 @@ const Home = () => {
       <SectionStyled>
         <picture>
           <source
-            srcSet={`${bg_1x_webP} 1x, ${bg_2x_webP} 2x`}
+            srcSet={`${bg_1x_web} 1x, ${bg_2x_web} 2x`}
             type="image/webp"
           />
           <source
