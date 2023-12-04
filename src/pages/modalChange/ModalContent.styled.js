@@ -32,3 +32,47 @@ line-height: calc(24/18);
 }
    
 `
+export const ModalDiscretion = styled.p`
+color: ${theme.colors.primaryDark};
+
+font-size: 14px;
+line-height: calc(20/14);
+margin-bottom: 24px;
+`
+
+export const ModalSubTitle = styled.h3`
+font-size: 14px;
+font-weight: 500;
+line-height: calc(20/14);
+margin-bottom: 8px;
+`
+
+export const RentalConditions = styled.p`
+display:flex;
+align-items: baseline;
+justify-content: baseline;
+padding: 7px 14px;
+
+font-family: Montserrat;
+font-size: 12px;
+
+font-weight: 400;
+line-height: calc(18/12);
+letter-spacing: -0.24px;
+
+border-radius: 35px;
+background: #F9F9F9;
+
+span{
+   color: ${theme.colors.primaryAccent};
+font-weight: 600;
+}
+
+`
+
+export const RentalConditionsWrapper = styled.div`
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
+margin-bottom: 24px;
+`

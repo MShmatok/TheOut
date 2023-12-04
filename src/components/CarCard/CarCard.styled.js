@@ -92,12 +92,5 @@ display: flex;
 gap:6px;
 overflow: hidden;
 
-
-span{
-    height: 100%;
-    width: 1px;
-background-color: #1214171a;
-
-}
 `
 

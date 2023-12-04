@@ -15,7 +15,7 @@ const initialState = {
         to: '',
     },
     onFilter: '',
-    dataForModal: ''
+    dataForModal: 'true'
 };
 
 const catalogSlice = createSlice({

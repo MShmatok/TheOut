@@ -1,5 +1,12 @@
 import React from 'react';
-import { ModalContainer, ModalTitleWrapper } from './ModalContent.styled';
+import {
+  ModalContainer,
+  ModalDiscretion,
+  ModalSubTitle,
+  ModalTitleWrapper,
+  RentalConditions,
+  RentalConditionsWrapper,
+} from './ModalContent.styled';
 import NoPhoto from '../../img/NoPhoto.png';
 import {
   CardFeatureWrapper,
@@ -8,6 +15,7 @@ import {
   FirstLine,
   SecondLine,
 } from 'components/CarCard/CarCard.styled';
+import { ButtonBase, ButtonRental } from 'CommonStyle/Button.styled';
 const data = {
   id: 9681,
   year: 2019,
@@ -51,6 +59,9 @@ const ModalContent = () => {
   const country = location[2];
   const city = location[1];
   const feature = accessories[2];
+  const conditions = rentalConditions.split('\n');
+  const age = conditions[0].match(/\d+/);
+
   return (
     <ModalContainer>
       <img
@@ -90,6 +101,46 @@ const ModalContent = () => {
           <FeatureContainer>Engine Size: {engineSize}</FeatureContainer>
         </SecondLine>
       </CardFeatureWrapper>
+      <ModalDiscretion>{description}</ModalDiscretion>
+      <ModalSubTitle>Accessories and functionalities:</ModalSubTitle>
+
+      <CardFeatureWrapper $marginBottom="24px">
+        <FirstLine>
+          {accessories.map(item => {
+            return (
+              <>
+                <FeatureContainer>{item}</FeatureContainer>
+                <span></span>
+              </>
+            );
+          })}
+        </FirstLine>
+        <SecondLine>
+          {functionalities.map(item => {
+            return (
+              <>
+                <FeatureContainer>{item}</FeatureContainer>
+                <span></span>
+              </>
+            );
+          })}
+        </SecondLine>
+      </CardFeatureWrapper>
+      <ModalSubTitle>Rental Conditions: </ModalSubTitle>
+      <RentalConditionsWrapper>
+        <RentalConditions>
+          Minimum age: <span> {age}</span>
+        </RentalConditions>
+        <RentalConditions>{conditions[1]}</RentalConditions>
+        <RentalConditions>{conditions[2]}</RentalConditions>
+        <RentalConditions>
+          Mileage: <span>{mileage}</span>
+        </RentalConditions>
+        <RentalConditions>
+          Price: <span>{rentalPrice}</span>
+        </RentalConditions>
+      </RentalConditionsWrapper>
+      <ButtonRental>Rental car</ButtonRental>
     </ModalContainer>
   );
 };

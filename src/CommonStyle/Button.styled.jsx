@@ -53,3 +53,8 @@ export const ButtonLoadMore = styled(ButtonBase)`
     font-weight: 700;
   }
 `;
+
+export const ButtonRental = styled(ButtonBase)`
+  padding: 12px 50px;
+  margin-right: auto;
+`;
