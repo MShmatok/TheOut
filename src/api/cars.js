@@ -1,5 +1,5 @@
 import { instance } from './auth'
-// import { data } from './data.js'
+import { data } from './data.js'
 
 export const getAllCars = async () => {
     const { data } = await instance('/cars')
@@ -12,11 +12,19 @@ export const getCarByPage = async (page) => {
 }
 
 
-// export const postCar = async (body) => {
-//     const { data } = await instance.post('/cars', body)
-//     return data
-// }
-// for (let index = 0; index <= data.length; index++) {
-//     console.log(index);
-//     postCar(data[index]);
-// }
+export const postCar = async (body) => {
+    const { data } = await instance.post('/cars', body)
+    return data
+}
+
+
+export const addData = () => {
+    let time = 1000
+    for (let index = 0; index <= data.length; index++) {
+        time = time + 1000;
+        setTimeout(() => {
+            console.log(index);
+            postCar(data[index]);
+        }, time);
+    }
+}
