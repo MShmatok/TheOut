@@ -33,6 +33,8 @@ const catalogSlice = createSlice({
         setFilterPrice: (state, { payload }) => { state.filter.price = payload },
         setFilterFrom: (state, { payload }) => { state.filter.from = payload },
         setFilterTo: (state, { payload }) => { state.filter.to = payload },
+        setCurrentPage: (state, { payload }) => { state.currentPage = state.currentPage + 1 },
+
         setOnFilter: handleOnFilter,
 
 
@@ -48,4 +50,4 @@ const catalogSlice = createSlice({
 })
 
 export const reducerCatalog = catalogSlice.reducer;
-export const { closeModal, clearData, setFilterBrand, setOnFilter, setFilterPrice, setFilterFrom, setFilterTo, openChangeModal } = catalogSlice.actions;
+export const { closeModal, clearData, setFilterBrand, setCurrentPage, setOnFilter, setFilterPrice, setFilterFrom, setFilterTo, openChangeModal } = catalogSlice.actions;

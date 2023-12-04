@@ -34,3 +34,22 @@ export const ButtonCard = styled(ButtonBase)`
   width: 100%;
   padding: 12px 44px;
 `;
+
+export const ButtonLoadMore = styled(ButtonBase)`
+  background-color: transparent;
+  color: ${theme.colors.primaryAccent};
+  color: #3470ff;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: calc(24 / 16);
+  text-decoration-line: underline;
+
+  &:hover {
+    box-shadow: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+  }
+`;

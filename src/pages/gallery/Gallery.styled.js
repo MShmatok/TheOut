@@ -15,4 +15,11 @@ margin-bottom: 50px;
 `
 export const ShowPart = styled.div`
 display: flex;
+margin-bottom: 100px;
+`
+
+export const LoadMore = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
 `
