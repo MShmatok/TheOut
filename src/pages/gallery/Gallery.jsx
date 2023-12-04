@@ -26,6 +26,7 @@ const Gallery = () => {
   const isLoading = useSelector(selectorIsLoading);
   const [page, setPage] = useState(1);
   const isFirstRender = useRef(true);
+
   useEffect(() => {
     dispatch(clearData());
     dispatch(getAllthunk());
@@ -45,7 +46,7 @@ const Gallery = () => {
     }
   };
 
-  const showLoadMore = allCars.length / 8 > page && !onFilter && !isLoading;
+  const showLoadMore = allCars.length / 12 > page && !onFilter && !isLoading;
   return (
     <div className="container">
       <Section>
