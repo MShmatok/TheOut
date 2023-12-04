@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FilterPart, LoadMore, Section, ShowPart } from './Gallery.styled';
 import FilterForm from './FilterForm/FilterForm';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,7 +23,7 @@ const Gallery = () => {
   const allCars = useSelector(selectAllCars);
   const isLoading = useSelector(selectorIsLoading);
   const [page, setPage] = useState(1);
-  const isFirstRender = useRef(true);
+  // const isFirstRender = useRef(false);
 
   useEffect(() => {
     dispatch(clearData());
@@ -31,12 +31,16 @@ const Gallery = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (!isFirstRender.current) {
-      dispatch(getCarByPageThunk(page));
-    } else {
-      isFirstRender.current = false;
-    }
+    dispatch(getCarByPageThunk(page));
   }, [dispatch, page]);
+
+  // useEffect(() => {
+  //   if (!isFirstRender.current) {
+  //     dispatch(getCarByPageThunk(page));
+  //   } else {
+  //     isFirstRender.current = false;
+  //   }
+  // }, [dispatch, page]);
 
   const loadMore = () => {
     if (allCars.length / 12 > page) {
