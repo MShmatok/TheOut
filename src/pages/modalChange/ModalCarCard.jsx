@@ -37,7 +37,7 @@ const ModalCarCard = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <ModalContent data={data}></ModalContent>
+        <ModalContent data={data} handleClose={handleClose}></ModalContent>
       </Modal>
     </div>
   );

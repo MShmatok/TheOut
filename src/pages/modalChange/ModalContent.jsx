@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  BtnClose,
   ModalContainer,
   ModalDiscretion,
   ModalSubTitle,
@@ -8,6 +9,7 @@ import {
   RentalConditionsWrapper,
 } from './ModalContent.styled';
 import NoPhoto from '../../img/NoPhoto.png';
+import iconClose from '../../img/close.svg';
 import {
   CardFeatureWrapper,
   FeatureContainer,
@@ -16,7 +18,7 @@ import {
 } from 'components/CarCard/CarCard.styled';
 import { ButtonRental } from 'CommonStyle/Button.styled';
 
-const ModalContent = ({ data }) => {
+const ModalContent = ({ data, handleClose }) => {
   const {
     id,
     img,
@@ -44,6 +46,11 @@ const ModalContent = ({ data }) => {
 
   return (
     <ModalContainer>
+      <BtnClose type="button" onClick={handleClose}>
+        <svg width="24" height="24">
+          <use href={iconClose + '#close'}></use>
+        </svg>
+      </BtnClose>
       <img
         src={img}
         onError={e => {

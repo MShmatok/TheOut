@@ -2,6 +2,24 @@ import theme from 'CommonStyle/themeJSX';
 import { CardTitleWrapper } from 'components/CarCard/CarCard.styled';
 import styled from 'styled-components';
 
+export const BtnClose = styled.div`
+cursor: pointer;
+position: absolute;
+top: 16px;
+right: 16px;
+  transition: all ${theme.animation.cubicBezier};
+
+svg{
+stroke: black;
+
+}
+&:hover{
+    scale: 1.2;
+}
+`
+
+
+
 export const ModalContainer = styled.div`
 position: absolute;
 top: 50%;
