@@ -13,8 +13,6 @@ import {
 import { clearData } from 'redux/cars/slice';
 import { ButtonLoadMore } from 'CommonStyle/Button.styled';
 import { selectorIsLoading } from 'redux/root/selectors';
-import { addData } from 'api/cars';
-// import { setCarsFiltered } from 'redux/cars/slice';
 
 const Gallery = () => {
   const dispatch = useDispatch();
@@ -64,9 +62,6 @@ const Gallery = () => {
             </ButtonLoadMore>
           )}
         </LoadMore>
-        <ButtonLoadMore type="button" onClick={addData}>
-          Add data
-        </ButtonLoadMore>
       </Section>
     </div>
   );
