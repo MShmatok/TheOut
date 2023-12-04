@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FilterPart, LoadMore, Section, ShowPart } from './Gallery.styled';
 import FilterForm from './FilterForm/FilterForm';
 import { useDispatch, useSelector } from 'react-redux';
@@ -24,24 +24,28 @@ const Gallery = () => {
   const CarsPagination = useSelector(selectCarsPagination);
   const allCars = useSelector(selectAllCars);
   const isLoading = useSelector(selectorIsLoading);
-
+  const [page, setPage] = useState(1);
+  const isFirstRender = useRef(true);
   useEffect(() => {
     dispatch(clearData());
     dispatch(getAllthunk());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(getCarByPageThunk(currentPage));
-  }, [dispatch, currentPage]);
+    if (!isFirstRender.current) {
+      dispatch(getCarByPageThunk(page));
+    } else {
+      isFirstRender.current = false;
+    }
+  }, [dispatch, page]);
 
   const loadMore = () => {
-    if (allCars.length / 12 > currentPage) {
-      dispatch(setCurrentPage());
+    if (allCars.length / 12 > page) {
+      setPage(p => p + 1);
     }
   };
 
-  const showLoadMore =
-    allCars.length / 8 > currentPage && !onFilter && !isLoading;
+  const showLoadMore = allCars.length / 8 > page && !onFilter && !isLoading;
   return (
     <div className="container">
       <Section>
