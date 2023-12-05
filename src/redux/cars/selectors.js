@@ -9,7 +9,7 @@ export const selectAllCars = state => state.catalog.carsAll;
 export const selectCarsPagination = state => state.catalog.carsPagination;
 export const selectOnFilter = state => state.catalog.onFilter;
 export const selectorDataForModal = state => state.catalog.dataForModal;
-
+export const selectFavorite = state => state.catalog.favorite;
 
 
 export const selectAllContacts = state => state.contact.contacts.items;

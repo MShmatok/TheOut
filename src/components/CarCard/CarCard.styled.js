@@ -97,8 +97,10 @@ position: absolute;
 top: 24px;
 right: 24px;
 stroke: red;
-
 background-color: transparent;
 
+&:hover{
+    scale: 1.1;
+}
 `
 

@@ -15,7 +15,8 @@ const initialState = {
         to: '',
     },
     onFilter: '',
-    dataForModal: ''
+    dataForModal: '',
+    favorite: []
 };
 
 const catalogSlice = createSlice({
@@ -46,8 +47,17 @@ const catalogSlice = createSlice({
             state.carsAll = [];
             state.carsPagination = [];
         },
+        addFavorite(state, { payload }) {
+            state.favorite.push(payload);
+
+        },
+        deleteFavorite(state, { payload }) {
+            const indexDelete = state.favorite.findIndex(car => car.id === payload.id);
+            state.favorite.splice(indexDelete, 1);
+        },
+
     }
 })
 
 export const reducerCatalog = catalogSlice.reducer;
-export const { closeModal, clearData, setFilterBrand, setCurrentPage, setOnFilter, setFilterPrice, setFilterFrom, setFilterTo, openModal } = catalogSlice.actions;
+export const { closeModal, clearData, addFavorite, deleteFavorite, setFilterBrand, setCurrentPage, setOnFilter, setFilterPrice, setFilterFrom, setFilterTo, openModal } = catalogSlice.actions;

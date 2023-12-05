@@ -13,8 +13,9 @@ import {
   SecondLine,
 } from './CarCard.styled';
 import { ButtonCard } from 'CommonStyle/Button.styled';
-import { useDispatch } from 'react-redux';
-import { openModal } from 'redux/cars/slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorite, deleteFavorite, openModal } from 'redux/cars/slice';
+import { selectFavorite } from 'redux/cars/selectors';
 
 const CarCard = ({ data }) => {
   const dispatch = useDispatch();
@@ -36,6 +37,15 @@ const CarCard = ({ data }) => {
   const onClick = data => {
     dispatch(openModal(data));
   };
+  const favoriteCars = useSelector(selectFavorite);
+
+  const toggleFavorite = data => {
+    if (favoriteCars.some(car => car.id === data.id)) {
+      dispatch(deleteFavorite(data));
+    } else {
+      dispatch(addFavorite(data));
+    }
+  };
   const location = address.split(',');
   const country = location[2];
   const city = location[1];
@@ -43,10 +53,20 @@ const CarCard = ({ data }) => {
 
   return (
     <ContainerCarCard>
-      <ButtonHeard>
-        <svg width="24" height="24">
-          <use href={icons + '#normal'}></use>
-        </svg>
+      <ButtonHeard
+        onClick={() => {
+          toggleFavorite(data);
+        }}
+      >
+        {favoriteCars.some(car => car.id === data.id) ? (
+          <svg width="24" height="24">
+            <use href={icons + '#active'}></use>
+          </svg>
+        ) : (
+          <svg width="24" height="24">
+            <use href={icons + '#normal'}></use>
+          </svg>
+        )}
       </ButtonHeard>
       <ImgWrapper>
         <img
