@@ -1,6 +1,9 @@
 import React from 'react';
 import NoPhoto from '../../img/NoPhoto.png';
+import icons from '../../img/svg/sprite.svg';
+
 import {
+  ButtonHeard,
   CardFeatureWrapper,
   CardTitleWrapper,
   ContainerCarCard,
@@ -40,6 +43,11 @@ const CarCard = ({ data }) => {
 
   return (
     <ContainerCarCard>
+      <ButtonHeard>
+        <svg width="24" height="24">
+          <use href={icons + '#normal'}></use>
+        </svg>
+      </ButtonHeard>
       <ImgWrapper>
         <img
           src={img}

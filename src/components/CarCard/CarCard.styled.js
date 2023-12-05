@@ -2,6 +2,8 @@ import theme from 'CommonStyle/themeJSX';
 import styled from 'styled-components';
 
 export const ContainerCarCard = styled.div`
+position: relative;
+    padding: 10px;
 width: 274px;
 display: flex;
 flex-direction: column;
@@ -22,13 +24,13 @@ transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, scale 300ms cubic-
 
 &:hover{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    scale: 1.04;
+    scale: 1.03;
+
+
 }
 `
 
 export const ImgWrapper = styled.div`
-position: relative;
-
 margin-bottom: 14px;
 `
 
@@ -80,17 +82,23 @@ export const FirstLine = styled.div`
 display: flex;
 gap:6px;
 overflow: hidden;
-
-
-
-
 `
 
 
 export const SecondLine = styled.div`
 display: flex;
+/* flex-wrap: wrap; */
 gap:6px;
 overflow: hidden;
+`
+
+export const ButtonHeard = styled.button`
+position: absolute;
+top: 24px;
+right: 24px;
+stroke: red;
+
+background-color: transparent;
 
 `
 

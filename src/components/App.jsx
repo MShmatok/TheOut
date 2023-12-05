@@ -7,7 +7,7 @@ import { GlobalStyles } from './GlobalStyled';
 import { ToastContainer } from 'react-toastify';
 import Gallery from 'pages/gallery/Gallery';
 import Favorite from 'pages/favorite/Favorite';
-import ModalCarCard from 'pages/modalChange/ModalCarCard';
+import ModalCarCard from 'pages/modal/ModalCarCard';
 
 const App = () => {
   return (

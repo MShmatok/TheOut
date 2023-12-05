@@ -9,7 +9,7 @@ import {
   RentalConditionsWrapper,
 } from './ModalContent.styled';
 import NoPhoto from '../../img/NoPhoto.png';
-import iconClose from '../../img/close.svg';
+import icons from '../../img/svg/sprite.svg';
 import {
   CardFeatureWrapper,
   FeatureContainer,
@@ -48,7 +48,7 @@ const ModalContent = ({ data, handleClose }) => {
     <ModalContainer>
       <BtnClose type="button" onClick={handleClose}>
         <svg width="24" height="24">
-          <use href={iconClose + '#close'}></use>
+          <use href={icons + '#close'}></use>
         </svg>
       </BtnClose>
       <img

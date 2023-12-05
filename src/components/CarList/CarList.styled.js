@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const ContainerCarList = styled.div`
 display: flex;
-row-gap: 50px;
-column-gap: 29px;
+row-gap: 30px;
+column-gap: 9px;
 flex-wrap: wrap;
 `
