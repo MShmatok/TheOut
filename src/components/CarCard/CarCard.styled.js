@@ -1,32 +1,31 @@
-import theme from 'CommonStyle/themeJSX';
+import theme from 'GlobalStyle/themeJSX';
 import styled from 'styled-components';
 
-export const ContainerCarCard = styled.div`
+export const ContainerCarCard = styled.li`
 position: relative;
-    padding: 10px;
+padding: 10px;
 width: 274px;
 display: flex;
 flex-direction: column;
 cursor: pointer;
 border-radius: 14px;
 
+transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, scale 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+
 img{
 width: 274px;
 height: 268px;
 object-fit: cover;
 object-position: center;
-
 border-radius: 14px;
-/* background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2; */
+
 }
 
-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, scale 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 
 &:hover{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     scale: 1.03;
-
-
 }
 `
 
@@ -59,10 +58,7 @@ gap: 5px;
 
 flex-grow: 1;
 span{
-    /* height: 100%; */
-    /* width: 1px; */
 border-left: 1px solid #1214171a;
-
 }
 
 `
@@ -74,8 +70,6 @@ font-weight: 400;
 line-height: calc(18/12);
 
 white-space: nowrap;
-
-
 `
 
 export const FirstLine = styled.div`

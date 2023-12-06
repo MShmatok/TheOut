@@ -1,4 +1,4 @@
-import theme from 'CommonStyle/themeJSX';
+import theme from 'GlobalStyle/themeJSX';
 import styled from 'styled-components';
 
 export const FormST = styled.form`

@@ -1,4 +1,4 @@
-import theme from 'CommonStyle/themeJSX';
+import theme from 'GlobalStyle/themeJSX';
 import { CardTitleWrapper } from 'components/CarCard/CarCard.styled';
 import styled from 'styled-components';
 

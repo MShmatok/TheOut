@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import Home from '../pages/home/Home';
 
-import { GlobalStyles } from './GlobalStyled';
+import { GlobalStyles } from '../GlobalStyle/GlobalStyled';
 
 import { ToastContainer } from 'react-toastify';
 import Gallery from 'pages/gallery/Gallery';

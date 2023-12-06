@@ -1,7 +1,6 @@
-// import theme from 'CommonStyle/themeJSX';
 import styled from 'styled-components';
 
-export const ContainerCarList = styled.div`
+export const ContainerCarList = styled.ul`
 display: flex;
 row-gap: 30px;
 column-gap: 9px;

@@ -1,4 +1,4 @@
-import theme from 'CommonStyle/themeJSX';
+import theme from 'GlobalStyle/themeJSX';
 import { createGlobalStyle } from 'styled-components';
 
 

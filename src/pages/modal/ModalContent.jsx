@@ -16,7 +16,7 @@ import {
   FirstLine,
   SecondLine,
 } from 'components/CarCard/CarCard.styled';
-import { ButtonRental } from 'CommonStyle/button.styled';
+import { ButtonRental } from 'components/Button/Button.styled';
 
 const ModalContent = ({ data, handleClose }) => {
   const {
