@@ -12,7 +12,7 @@ import {
   ImgWrapper,
   SecondLine,
 } from './CarCard.styled';
-import { ButtonCard } from 'CommonStyle/Button.styled';
+import { ButtonCard } from 'CommonStyle/button.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, deleteFavorite, openModal } from 'redux/cars/slice';
 import { selectFavorite } from 'redux/cars/selectors';

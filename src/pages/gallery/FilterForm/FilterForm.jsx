@@ -16,7 +16,7 @@ import { setOnFilter } from 'redux/cars/slice';
 import InputBrands from './FilterComponents/InputBrands';
 import InputPrice from './FilterComponents/InputPrice';
 import InputMileage from './FilterComponents/InputMileage';
-import { ButtonBase } from 'CommonStyle/Button.styled';
+import { ButtonBase } from 'CommonStyle/button.styled';
 
 const FilterForm = () => {
   const dispatch = useDispatch();

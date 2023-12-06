@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
-import LinearIndeterminate from 'components/loaderMui/LoaderMui';
-import Header from 'components/header/Header';
+import LinearIndeterminate from 'components/LoaderMui/LoaderMui';
+import Header from 'components/Header/Header';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';

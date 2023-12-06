@@ -11,12 +11,10 @@ export const getCarByPage = async (page) => {
     return data
 }
 
-
 export const postCar = async (body) => {
     const { data } = await instance.post('/cars', body)
     return data
 }
-
 
 export const addData = () => {
     let time = 1000

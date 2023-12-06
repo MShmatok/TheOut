@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Layout from './layout/Layout';
+import Layout from './Layout/Layout';
 import Home from '../pages/home/Home';
 
 import { GlobalStyles } from './GlobalStyled';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderStyled } from './HeaderStyled.styled';
-import { RouterLink } from 'components/button/button.styled';
+import { RouterLink } from 'components/Button/button.styled';
 
 const Header = () => {
   return (

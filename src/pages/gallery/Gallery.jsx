@@ -11,7 +11,7 @@ import {
   selectOnFilter,
 } from 'redux/cars/selectors';
 import { clearData } from 'redux/cars/slice';
-import { ButtonLoadMore } from 'CommonStyle/Button.styled';
+import { ButtonLoadMore } from 'CommonStyle/button.styled';
 import { selectorIsLoading } from 'redux/root/selectors';
 
 const Gallery = () => {
