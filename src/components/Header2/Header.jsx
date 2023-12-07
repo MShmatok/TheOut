@@ -2,7 +2,7 @@ import React from 'react';
 import { HeaderStyled, Logo, Navigation } from './HeaderStyled.styled';
 import { RouterLink } from 'components/Button2/Button.styled';
 import { Box } from '@mui/material';
-import LinearIndeterminate from 'components/LoaderMui/LoaderMui';
+import LinearIndeterminate from 'components/LoaderMui2/LoaderMui';
 import { selectorIsLoading } from 'redux/root/selectors';
 import { useSelector } from 'react-redux';
 import Container from 'components/Container/Container';
