@@ -17,7 +17,7 @@ const Header = () => {
       <Container>
         <Logo to="/">
           <h3>THE OUT</h3>
-          <p>to your world today</p>
+          <p>car rental service</p>
         </Logo>
         <Navigation>
           <RouterLink to={'/'}>HOME</RouterLink>
