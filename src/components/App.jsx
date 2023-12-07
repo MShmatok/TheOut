@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import Gallery from 'pages/gallery/Gallery';
 import Favorite from 'pages/favorite/Favorite';
 import ModalCarCard from 'pages/modal/ModalCarCard';
+import Layout from './Layout/Layout';
 
 const App = () => {
   return (
