@@ -1,16 +1,23 @@
 import React from 'react';
 import { HeaderStyled } from './HeaderStyled.styled';
 import { RouterLink } from 'components/Button/Button.styled';
+import { Box } from '@mui/material';
+import LinearIndeterminate from 'components/LoaderMui/LoaderMui';
+import { selectorIsLoading } from 'redux/root/selectors';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const isLoading = useSelector(selectorIsLoading);
+
   return (
-    <div className="container">
-      <HeaderStyled>
+    <HeaderStyled>
+      <div className="container">
         <RouterLink to={'/'}>Home</RouterLink>
         <RouterLink to={'/catalog'}>Catalog</RouterLink>
         <RouterLink to={'/favorite'}>Favorite</RouterLink>
-      </HeaderStyled>
-    </div>
+      </div>
+      <Box sx={{ height: '5px' }}>{isLoading && <LinearIndeterminate />}</Box>
+    </HeaderStyled>
   );
 };
 

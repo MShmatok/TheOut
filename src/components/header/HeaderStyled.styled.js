@@ -8,4 +8,6 @@ display: flex;
 gap: 17px;
 justify-content: flex-start;
 align-items: center;
+position: absolute;
+top:0;
 `

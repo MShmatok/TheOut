@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <React.StrictMode>
-        <BrowserRouter basename="/test-goit" >
+        <BrowserRouter basename="/theout" >
           <App />
         </BrowserRouter>
 
