@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderStyled, Logo, Navigation } from './HeaderStyled.styled';
-import { RouterLink } from 'components/Button/Button.styled';
+import { RouterLink } from 'components/Button2/Button.styled';
 import { Box } from '@mui/material';
 import LinearIndeterminate from 'components/LoaderMui/LoaderMui';
 import { selectorIsLoading } from 'redux/root/selectors';
