@@ -17,7 +17,7 @@ img{
 width: 274px;
 height: 268px;
 object-fit: cover;
-object-position: center;
+object-position: center center;
 border-radius: 14px;
 
 }

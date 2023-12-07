@@ -1,5 +1,5 @@
-// import theme from 'CommonStyle/themeJSX';
 import styled from 'styled-components';
+
 
 export const Section = styled.section`
 padding: 12px 0;
@@ -20,6 +20,7 @@ margin-bottom: 50px;
 export const ShowPart = styled.div`
 display: flex;
 margin-bottom: 100px;
+justify-content: center;
 `
 
 export const LoadMore = styled.div`

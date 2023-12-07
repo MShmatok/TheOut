@@ -1,5 +1,4 @@
 import theme from 'GlobalStyle/themeJSX';
-
 import styled from 'styled-components';
 
 import hero_1440_webP from '../../img/bg/homepage_hero_1440.webp'

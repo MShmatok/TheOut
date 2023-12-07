@@ -4,14 +4,23 @@ import { Section, ShowPart } from 'pages/gallery/Gallery.styled';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectFavorite } from 'redux/cars/selectors';
+import { Notice } from './Favotire.styled';
 
 const Favorite = () => {
   const favoriteCars = useSelector(selectFavorite);
+  console.log('Object', Object.entries(favoriteCars).length);
   return (
     <Section>
       <Container>
         <ShowPart>
-          <CarList data={favoriteCars} />
+          {Object.entries(favoriteCars).length ? (
+            <CarList data={favoriteCars} />
+          ) : (
+            <Notice>
+              Add your favorite cars by clicking on the heart on the right in
+              the catalog
+            </Notice>
+          )}
         </ShowPart>
       </Container>
     </Section>
