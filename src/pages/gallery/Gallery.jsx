@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FilterPart, LoadMore, Section, ShowPart } from './Gallery.styled';
+import Container from 'components/Container/Container';
+
 import FilterForm from './FilterForm/FilterForm';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllthunk, getCarByPageThunk } from 'redux/cars/thunk';
@@ -50,8 +52,8 @@ const Gallery = () => {
 
   const showLoadMore = allCars.length / 12 > page && !onFilter && !isLoading;
   return (
-    <div className="container">
-      <Section>
+    <Section>
+      <Container>
         <FilterPart>
           <FilterForm />
         </FilterPart>
@@ -66,8 +68,8 @@ const Gallery = () => {
             </ButtonLoadMore>
           )}
         </LoadMore>
-      </Section>
-    </div>
+      </Container>
+    </Section>
   );
 };
 

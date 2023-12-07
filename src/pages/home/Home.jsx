@@ -4,7 +4,12 @@ import { SectionStyled } from './Home.styled';
 const Home = () => {
   return (
     <SectionStyled>
-      <div className="container"></div>
+      <div className="container">
+        <h1>
+          Luxury cars.
+          <br /> Premium service.
+        </h1>
+      </div>
     </SectionStyled>
   );
 };

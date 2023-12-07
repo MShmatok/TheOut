@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 export const RouterLink = styled(NavLink)`
     position: relative;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 20px;
   font-weight: 600;
-  color: ${theme.colors.primaryAccent};
+  /* color: ${theme.colors.primaryLight}; */
   text-decoration: none;
 
   display: flex;
