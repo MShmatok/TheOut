@@ -36,14 +36,6 @@ const Gallery = () => {
     dispatch(getCarByPageThunk(page));
   }, [dispatch, page]);
 
-  // useEffect(() => {
-  //   if (!isFirstRender.current) {
-  //     dispatch(getCarByPageThunk(page));
-  //   } else {
-  //     isFirstRender.current = false;
-  //   }
-  // }, [dispatch, page]);
-
   const loadMore = () => {
     if (allCars.length / 12 > page) {
       setPage(p => p + 1);

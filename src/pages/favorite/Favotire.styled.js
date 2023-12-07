@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Notice = styled.p`
-font-size: 20px;
+  font-size: 20px;
 
-margin-top: 50px;
-`
+  margin-top: 50px;
+`;

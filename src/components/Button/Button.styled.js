@@ -3,11 +3,10 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const RouterLink = styled(NavLink)`
-    position: relative;
+  position: relative;
   font-size: 20px;
   line-height: 20px;
   font-weight: 600;
-  /* color: ${theme.colors.primaryLight}; */
   text-decoration: none;
 
   display: flex;
@@ -23,21 +22,21 @@ export const RouterLink = styled(NavLink)`
     left: 0;
     width: 0;
     height: 3px;
-    border-radius:10px ;
+    border-radius: 10px;
     background-color: ${theme.colors.secondaryYellow};
     transition: width 0.3s ease;
   }
   &:hover:before {
     width: 100%;
   }
-  &.active{
-     color: ${theme.colors.secondaryYellow};
+  &.active {
+    color: ${theme.colors.secondaryYellow};
     transition: color 0.3s ease;
   }
-    &.active:before {
-     width: 100%;
+  &.active:before {
+    width: 100%;
   }
- `;
+`;
 
 export const ButtonBase = styled.button`
   display: flex;
@@ -57,7 +56,6 @@ export const ButtonBase = styled.button`
   border: none;
   border-radius: 12px;
   background-color: ${theme.colors.primaryAccent};
-  /* box-shadow: 0px 4px 8px 0px rgba(64, 123, 255, 0.34); */
 
   transition: all ${theme.animation.cubicBezier};
   cursor: pointer;
@@ -110,7 +108,6 @@ export const ButtonRental = styled.a`
   border: none;
   border-radius: 12px;
   background-color: ${theme.colors.primaryAccent};
-  /* box-shadow: 0px 4px 8px 0px rgba(64, 123, 255, 0.34); */
 
   transition: all ${theme.animation.cubicBezier};
   cursor: pointer;
@@ -123,5 +120,3 @@ export const ButtonRental = styled.a`
   padding: 12px 50px;
   margin-right: auto;
 `;
-
-

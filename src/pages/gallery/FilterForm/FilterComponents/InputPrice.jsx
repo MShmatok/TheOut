@@ -9,9 +9,7 @@ const InputPrice = ({ values, setFieldValue }) => {
   const [isOpenDropDown, setIsOpenDropDown] = useState(false);
   const dispatch = useDispatch();
   const ref = useRef(null);
-
   const rangePrice = useSelector(selectRangePrice);
-  // const filteredBrands = useSelector(selectorFilteredBrands);
 
   const onMouseDownBrand = price => {
     setFieldValue('price', price);

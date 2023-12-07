@@ -7,19 +7,14 @@ import { persistor, store } from 'redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <React.StrictMode>
-        <BrowserRouter basename="/TheOut" >
+        <BrowserRouter basename="/TheOut">
           <App />
         </BrowserRouter>
-
       </React.StrictMode>
     </PersistGate>
   </Provider>
-
 );
-
-// basename = "/goit-react-hw-08-phonebook" 
