@@ -51,7 +51,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	.container {
-		max-width: 1440px;
+		width: 1440px;
 		padding: 0 128px;
 		margin-left:  auto;
 		margin-right: auto;
