@@ -37,10 +37,6 @@ To get started with the project, follow these steps:
 
 `git clone` <repository-url>
 
-2. Change directory to the project folder:
-
-`cd rent-cars-react`
-
 3.  Install the project dependencies:
 
 `npm install`
