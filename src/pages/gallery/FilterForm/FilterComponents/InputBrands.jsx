@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { DropDownBrands, InputBrandsST, LabelST } from '../FilterForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { selectorFilteredBrands } from 'redux/cars/selectors';
 import { setFilterBrand } from 'redux/cars/slice';
+import PropTypes from 'prop-types';
 
 const InputBrands = ({ values, setFieldValue }) => {
   const [isOpenDropDown, setIsOpenDropDown] = useState(false);
@@ -72,6 +72,11 @@ const InputBrands = ({ values, setFieldValue }) => {
       )}
     </LabelST>
   );
+};
+
+InputBrands.propTypes = {
+  values: PropTypes.object,
+  setFieldValue: PropTypes.func,
 };
 
 export default InputBrands;

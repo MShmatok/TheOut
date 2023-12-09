@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {
   BtnClose,
   ModalContainer,
@@ -132,4 +134,8 @@ const ModalContent = ({ data, handleClose }) => {
   );
 };
 
+ModalContent.propTypes = {
+  data: PropTypes.object,
+  handleClose: PropTypes.func,
+};
 export default ModalContent;

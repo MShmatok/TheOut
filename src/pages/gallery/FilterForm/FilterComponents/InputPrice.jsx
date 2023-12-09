@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { DropDownBrands, InputPriceST, LabelST } from '../FilterForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import { selectRangePrice } from 'redux/cars/selectors';
 import { setFilterPrice } from 'redux/cars/slice';
 
@@ -65,4 +65,8 @@ const InputPrice = ({ values, setFieldValue }) => {
   );
 };
 
+InputPrice.propTypes = {
+  values: PropTypes.object,
+  setFieldValue: PropTypes.func,
+};
 export default InputPrice;

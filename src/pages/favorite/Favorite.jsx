@@ -8,7 +8,7 @@ import { Notice } from './Favotire.styled';
 
 const Favorite = () => {
   const favoriteCars = useSelector(selectFavorite);
-  console.log('Object', Object.entries(favoriteCars).length);
+
   return (
     <Section>
       <Container>

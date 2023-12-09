@@ -6,8 +6,9 @@ import {
   MileageInputWrapper,
 } from '../FilterForm.styled';
 import { useDispatch } from 'react-redux';
-
 import { setFilterFrom, setFilterTo } from 'redux/cars/slice';
+import PropTypes from 'prop-types';
+
 
 const InputMileage = ({ values, setFieldValue }) => {
   const dispatch = useDispatch();
@@ -71,5 +72,8 @@ const InputMileage = ({ values, setFieldValue }) => {
     </LabelST>
   );
 };
-
+InputMileage.propTypes = {
+  values: PropTypes.object,
+  setFieldValue: PropTypes.func,
+};
 export default InputMileage;

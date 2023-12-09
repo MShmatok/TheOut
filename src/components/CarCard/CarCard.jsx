@@ -1,6 +1,7 @@
 import React from 'react';
 import NoPhoto from '../../img/NoPhoto.png';
 import icons from '../../img/svg/sprite.svg';
+import PropTypes from 'prop-types';
 
 import {
   ButtonHeard,
@@ -113,4 +114,7 @@ const CarCard = ({ data }) => {
   );
 };
 
+CarCard.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 export default CarCard;
