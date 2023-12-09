@@ -21,6 +21,7 @@ import {
 import { ButtonRental } from 'components/Button/Button.styled';
 
 const ModalContent = ({ data, handleClose }) => {
+  console.log(data);
   const {
     id,
     img,
@@ -135,7 +136,7 @@ const ModalContent = ({ data, handleClose }) => {
 };
 
 ModalContent.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   handleClose: PropTypes.func,
 };
 export default ModalContent;
