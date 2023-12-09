@@ -1,4 +1,4 @@
-## Car Rental Application
+## The Out - Car Rental Application
 
 ---
 
