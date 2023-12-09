@@ -1,23 +1,77 @@
-Built using React, this straightforward car rental application enables users to peruse a catalog of available rental cars, add preferred vehicles to their favorites, and access comprehensive information about each car. The application also incorporates filtering options to assist users in discovering cars that align with their preferences.
+## Car Rental Application
 
-Features
-View a catalog of cars available for rent.
-Filter cars by make, rental price, and mileage.
-Add cars to your favorites.
-View detailed information about each car.
-Contact the rental company via phone.
+---
 
-Technologies
-React
-React Router
-Redux Axios
-Tailwind
-MockAPI for data
-Contributing
-Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
+This is a simple car rental application built with React. It allows users to
+browse a catalog of cars available for rent, add cars to their favorites, and
+view detailed information about each car. The application also includes
+filtering options to help users find cars that match their preferences.
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them with descriptive commit messages.
-Push your changes to your fork.
-Open a pull request to the main repository.
+### Table of Contents
+
+- Demo
+- Features
+- Getting Started
+- Usage
+- Technologies Contributing
+- License
+
+### Demo
+
+You can access the live _demo_ of the application
+[here](https://mshmatok.github.io/TheOut-rent_car_service/).
+
+### Features
+
+- View a catalog of cars available for rent.
+- Filter cars by make, rental price, and mileage.
+- Add cars to your favorites.
+- View detailed information about each car.
+- Contact the rental company via phone.
+
+### Getting Started
+
+To get started with the project, follow these steps:
+
+1. Clone this repository to your local machine:
+
+`git clone` <repository-url>
+
+2. Change directory to the project folder:
+
+`cd rent-cars-react`
+
+3.  Install the project dependencies:
+
+`npm install`
+
+4. Start the development server:
+
+`npm run dev`
+
+### Usage
+
+- Browse the catalog of cars on the home page.
+- Use the filters to narrow down your search based on make, rental price, and
+  mileage. - Click the heart icon to add a car to your favorites.
+- Click the "Learn more" button to view detailed information about a car.
+- Contact the rental company by clicking the "Rental car" link.
+
+### Technologies
+
+- React
+- React Router
+- Redux Axios
+- Styled-component
+- MockAPI for data
+
+### Contributing
+
+Contributions are welcome! If you'd like to contribute to the project, please
+follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your changes to your fork.
+5. Open a pull request to the main repository.
