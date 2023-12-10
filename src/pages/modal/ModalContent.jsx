@@ -21,7 +21,6 @@ import {
 import { ButtonRental } from 'components/Button/Button.styled';
 
 const ModalContent = ({ data, handleClose }) => {
-  console.log(data);
   const {
     id,
     img,
